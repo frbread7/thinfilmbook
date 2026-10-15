@@ -10,10 +10,10 @@ The candidate is buildable offline. Before any public release, the owner must au
 4. Verify the successful Pages deployment's source SHA and check both language landing pages, all 24 chapter routes, the three lab anchors, citations, and license links against the live site.
 5. Record deployment evidence separately from the release tag. Keep the My Library manifest `in-progress` until its production requirements and evidence are reviewed and explicitly updated.
 
-The current local verification cannot satisfy steps 2–5.
+The current local verification cannot satisfy steps 2–5. The candidate now has local Git history, but no public remote, CI run, source publication, or deployment evidence.
 
 ## Current publication workflow defect
 
 The local `.github/workflows/pages.yml` workflow deploys the checked-in `site/` directory from `main` without first building the current source or running validation. A source change can therefore publish stale generated pages, and the deployment job has no passing build/test result to tie to its artifact. The file has intentionally not been changed during this candidate because it changes production release behavior. The minimal proposed repair is to add a CI job that runs `npm test` on the exact candidate revision, upload that job's generated `site/` directory as an artifact, and make the Pages deployment job depend on the successful CI job and deploy that artifact. Review and authorize this workflow change before enabling public publication.
 
-This ThinFilmBook working directory is not a Git checkout, so it has no candidate commit SHA or local source history to record yet. The local build and browser checks establish only that the current files pass those checks; they do not provide release traceability.
+The local build and browser checks establish only that the current files pass those checks; they do not provide external CI or deployment traceability. Keep the local source SHA separate from the release tag and deployed production revision.
