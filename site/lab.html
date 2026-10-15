@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Analytical labs — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>Analytical labs · ThinFilmBook</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="module" src="assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">ThinFilmBook</a>
+    <span class="subtitle">Thin-film science · engineering models</span>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Overview</a>
+      <a href="lab.html">Analytical labs</a>
+      <a href="references.html">References</a>
+      <a href="license.html">License &amp; provenance</a>
+    </nav>
+    <a class="language-link" lang="ko" href="ko/lab.html">한국어</a>
+  </header>
+  <div class="page-layout">
+
+    <main id="main"><article><p class="eyebrow">ThinFilmBook · Analytical lab</p><h1>Analytical labs</h1><p class="lede">Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p><div class="lab-list"><section class="lab-card" id="ald-conformality" aria-labelledby="title-ald-conformality">
+  <p class="eyebrow">Idealized 1-D transport and saturation model</p><h2 id="title-ald-conformality">ALD conformality explorer</h2>
+  <p class="lab-description">Vary dimensionless transport limitation and exposure to inspect an idealized steady feature concentration and first-order surface coverage profile.</p><p class="assumption-note">Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p>
+  <form class="model-form" data-model="ald-conformality"><div class="field-grid"><label for="ald-phi">Transport-reaction parameter φ<input id="ald-phi" name="ald-phi" type="number" value="1.5" min="0" max="8" step="0.1" inputmode="decimal" required></label><label for="ald-dose">Dimensionless exposure<input id="ald-dose" name="ald-dose" type="number" value="1" min="0" max="10" step="0.1" inputmode="decimal" required></label></div><button type="button" id="run-ald">Calculate</button></form>
+  <figure><svg id="ald-chart" viewBox="0 0 720 260" role="img" aria-label="Normalized depth profile"></svg><figcaption>Normalized depth profile · Concentration ratio C/C₀ (blue) · idealized coverage θ (orange)</figcaption></figure><div class="model-result" id="result-ald-conformality" role="status" aria-live="polite"><span class="result-label">Model output</span><p>Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p></div>
+  <details class="model-limits"><summary>Model assumptions and limits</summary><p>Assumes a steady one-dimensional feature, constant effective diffusivity, a first-order wall sink, and a single idealized exposure. It is not a cycle-accurate ALD simulator.</p></details>
+</section><section class="lab-card" id="cvd-resistances" aria-labelledby="title-cvd-resistances">
+  <p class="eyebrow">Series mass-transfer and reaction resistance</p><h2 id="title-cvd-resistances">CVD rate-limitation explorer</h2>
+  <p class="lab-description">Compare gas-film transfer and first-order surface-reaction resistance in a steady, reduced-order CVD flux model.</p><p class="assumption-note">Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p>
+  <form class="model-form" data-model="cvd-resistances"><div class="field-grid"><label for="cvd-concentration">Bulk concentration (mol/m³)<input id="cvd-concentration" name="cvd-concentration" type="number" value="1" min="0" max="1000000" step="0.1" inputmode="decimal" required></label><label for="cvd-km">Gas-transfer coefficient km (m/s)<input id="cvd-km" name="cvd-km" type="number" value="0.1" min="0.000001" max="10000" step="0.01" inputmode="decimal" required></label><label for="cvd-ks">Surface-reaction coefficient ks (m/s)<input id="cvd-ks" name="cvd-ks" type="number" value="0.1" min="0.000001" max="10000" step="0.01" inputmode="decimal" required></label></div><button type="button" id="run-cvd">Calculate</button></form>
+  <div class="model-result" id="result-cvd-resistances" role="status" aria-live="polite"><span class="result-label">Model output</span><p>Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p></div>
+  <details class="model-limits"><summary>Model assumptions and limits</summary><p>Assumes steady one-dimensional transport and a first-order surface sink with constant coefficients. It does not model reactor geometry, depletion, gas-phase chemistry, or wafer-scale uniformity.</p></details>
+</section><section class="lab-card" id="stoney-stress" aria-labelledby="title-stoney-stress">
+  <p class="eyebrow">Isotropic Stoney-equation estimate</p><h2 id="title-stoney-stress">Curvature-to-stress estimator</h2>
+  <p class="lab-description">Estimate signed average film stress from a small curvature change using explicitly stated isotropic and thin-film assumptions.</p><p class="assumption-note">Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p>
+  <form class="model-form" data-model="stoney-stress"><div class="field-grid"><label for="stoney-modulus">Substrate modulus E (GPa)<input id="stoney-modulus" name="stoney-modulus" type="number" value="180" min="1" max="1000" step="1" inputmode="decimal" required></label><label for="stoney-poisson">Poisson ratio ν<input id="stoney-poisson" name="stoney-poisson" type="number" value="0.28" min="0" max="0.49" step="0.01" inputmode="decimal" required></label><label for="stoney-substrate">Substrate thickness (µm)<input id="stoney-substrate" name="stoney-substrate" type="number" value="500" min="1" max="10000" step="10" inputmode="decimal" required></label><label for="stoney-film">Film thickness (nm)<input id="stoney-film" name="stoney-film" type="number" value="100" min="0.1" max="100000" step="10" inputmode="decimal" required></label><label for="stoney-curvature">Curvature change Δκ (m⁻¹)<input id="stoney-curvature" name="stoney-curvature" type="number" value="0.1" min="-1000000" max="1000000" step="0.1" inputmode="decimal" required></label></div><button type="button" id="run-stoney">Calculate</button></form>
+  <div class="model-result" id="result-stoney-stress" role="status" aria-live="polite"><span class="result-label">Model output</span><p>Illustrative model only. Inputs are dimensionless or hypothetical and are not calibrated recipes, setpoints, or manufacturing recommendations.</p></div>
+  <details class="model-limits"><summary>Model assumptions and limits</summary><p>Assumes an isotropic elastic substrate, a uniform thin film, small curvature, and an equibiaxial average stress. Silicon is anisotropic; use an appropriate elastic model for real wafer interpretation. Sign follows the selected curvature convention; it is not a universal tensile/compressive label.</p></details>
+</section></div></article><footer class="site-footer"><span>Original educational work · illustrative models only</span><a href="license.html">License &amp; provenance</a></footer></main>
+  </div>
+</body>
+</html>

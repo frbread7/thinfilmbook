@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="화학 기상 증착: 수송과 반응 — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>화학 기상 증착: 수송과 반응 · ThinFilmBook</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script type="module" src="../../assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">ThinFilmBook</a>
+    <span class="subtitle">박막 과학 · 공학 모델</span>
+    <nav aria-label="주요 탐색">
+      <a href="../index.html">개요</a>
+      <a href="../lab.html">분석 실험실</a>
+      <a href="../references.html">참고문헌</a>
+      <a href="../license.html">라이선스·출처</a>
+    </nav>
+    <a class="language-link" lang="en" href="../../chapters/06-cvd.html">English</a>
+  </header>
+  <div class="page-layout">
+    <aside class="chapter-nav" aria-label="장 목록"><h2>모든 장</h2><a href="01-film-objectives.html"><span>01</span> 박막의 기능과 설계 목표</a><a href="02-growth-thermodynamics.html"><span>02</span> 박막 성장의 열역학적 구동력</a><a href="03-surface-kinetics.html"><span>03</span> 증착 중 표면 동역학</a><a href="04-nucleation-coalescence.html"><span>04</span> 핵생성에서 연결된 박막까지</a><a href="05-pvd.html"><span>05</span> 물리적 기상 증착: 증발과 스퍼터링</a><a aria-current="page" href="06-cvd.html"><span>06</span> 화학 기상 증착: 수송과 반응</a><a href="07-ald.html"><span>07</span> 원자층 증착: 사이클과 등각성</a><a href="08-epitaxy.html"><span>08</span> 에피택시: 격자 정합, 변형률, 결함</a><a href="interfaces.html"><span>09</span> 계면, 상호확산 및 상 발달</a><a href="stress-adhesion.html"><span>10</span> 박막 응력, 접착 및 박리</a><a href="metrology.html"><span>11</span> 박막 계측과 측정 모델</a><a href="integration.html"><span>12</span> 재료 목표에서 공정 통합까지</a></aside>
+    <main id="main"><article class="chapter-content" id="c06-cvd">
+  <p class="eyebrow">장 06 · 증착법과 수송</p>
+  <h1>화학 기상 증착: 수송과 반응</h1>
+  <p class="lede">CVD의 전구체 공급, 기상 및 표면 반응, 수송 제한, 웨이퍼 규모 불균일성을 정량적으로 설명합니다.</p>
+  <section class="objectives"><h2>학습 목표</h2><ul><li>전구체가 입구에서 반응 표면까지 이동하는 경로를 설명한다.</li><li>표면 반응 제한 성장과 물질 전달 제한 성장을 구분한다.</li><li>가정이 충족될 때만 직렬 저항 속도 모델을 사용한다.</li><li>고갈, 로딩, 유동이 균일도에 미치는 영향을 설명한다.</li></ul></section>
+  <section><h2>공급과 표면 근방 영역</h2><p>CVD는 휘발성 반응물을 가열되었거나 다른 방식으로 활성화된 표면에 공급하며, 화학 변환으로 고체 막과 휘발성 부산물을 만듭니다. 공급에는 입구 혼합, 반응기 내 대류, 표면 근방 경계층을 가로지르는 확산, 표면 흡착 또는 반응이 포함됩니다. 이 경로를 따라 온도와 조성이 달라질 수 있으므로 입구의 분압이 기판 모든 지점에서 경험하는 농도와 같다고 볼 수 없습니다 <a class="citation" href="../references.html#ref-r05" aria-label="On the modelling of transport phenomena in chemical vapour deposition and its use in reactor design and process optimization">[r05]</a>.</p><p>경계층 설명은 벽 가까이의 상대적으로 느린 영역이 벌크 유동과 표면을 나누는 경우 유용합니다. 반응물은 막 표면에 도달하기 위해 이 영역을 통과하고 생성물은 빠져나와야 합니다. 경계층은 고정된 두께의 코팅이 아닙니다. 두께와 농도 분포는 유동, 기하, 온도, 확산계수, 표면 소비량에 좌우됩니다. 실제 반응기는 단일 경계층 추산보다 유동, 열전달, 화학을 결합한 모델을 필요로 할 수 있습니다.</p></section><section><h2>반응 속도와 수송 속도의 경쟁</h2><p>표면 반응 제한 영역에서는 수송이 표면 소비보다 빠르게 반응물을 보충할 수 있습니다. 이때 표면 농도는 벌크 값에 가깝게 유지되고, 흔히 온도 의존성이 큰 표면 반응 속도가 성장을 지배합니다. 물질 전달 제한 영역은 보충에 비해 표면 소비가 빠른 경우이며, 표면 근방 반응물 농도가 낮아지고 성장은 수송에 반응합니다. 이는 극한을 설명하는 표현이지, 서로 배타적인 반응기 분류는 아닙니다. 서로 다른 위치나 반응물이 동시에 다른 영역에 놓일 수 있습니다.</p><p>정상 상태, 1차원, 단일 반응물, 선형 1차 표면 소비, 일정한 확산계수와 전달계수, 기상 반응 없음, 생성물 피드백 무시를 가정한 모델에서는 몰 플럭스를 J = k_g(C_b − C_s) = k_s C_s로 씁니다. 여기서 k_g는 물질 전달 계수, k_s는 유효 표면 속도 계수, C_b는 벌크 농도, C_s는 표면 농도입니다. 이를 풀면 J = C_b/(1/k_g + 1/k_s)라는 직렬 저항 형태가 됩니다. 이는 보편적 CVD 속도식이 아닙니다. 비선형 흡착, 다중 반응물, 변화하는 표면 피복, 기상 화학 또는 과도 상태에서는 이 단순식의 가정이 깨집니다 <a class="citation" href="../references.html#ref-r05" aria-label="On the modelling of transport phenomena in chemical vapour deposition and its use in reactor design and process optimization">[r05]</a>.</p></section><section><h2>로딩, 고갈, 균일도</h2><p>반응 면적이나 기판 수가 늘면 반응기가 전구체에 제공하는 전체 소모 면적도 커집니다. 공급과 혼합이 함께 늘지 않으면 상류 표면이 반응물을 소비해 하류 표면에는 고갈된 공급이 도달할 수 있습니다. 이 로딩 효과는 유동 경로에 따라 성장률, 조성, 상을 바꿀 수 있습니다. 결과는 반응기 기하, 체류 시간, 온도장, 반응 확률, 기체 보충에 좌우됩니다. 로딩이라는 말만으로 정량적 보정값을 정할 수는 없습니다.</p><p>균일도 설계는 입구 분포, 기체 속도, 경계층 발달, 온도 구배, 펌프와 배기 위치, 반응 면적의 공간 분포를 포함해 반응기 전체의 결합 상태를 살핍니다. 강한 입구-출구 고갈이 없어도 기판을 가로지르는 온도나 유동 차이로 웨이퍼에 반경 방향 변화가 생길 수 있습니다. 두께 균일도 역시 조성이나 결함 밀도의 균일성을 보장하지 않습니다. 중요한 출력 특성을 측정하고, 최적화 전에 특정 반응기와 운전 영역에서 모델을 확인해야 합니다.</p></section><section><h2>모델의 사용과 해석</h2><p>무차원수와 수송 계산은 지배 메커니즘의 가능성을 가려내는 데 도움을 주지만, 적절한 물성치와 길이 척도가 필요합니다. 기체 확산계수, 점도, 밀도, 반응 속도는 온도와 조성에 따라 달라질 수 있습니다. 하나의 대표값으로 계산했다면 가정을 명시한 국소 추산으로 취급하는 것이 적절합니다. 물성치나 경계 조건이 불확실하면 그 불확실성이 예측된 공정 경향과 비슷한 크기일 수도 있습니다.</p><p>유용한 모델링 절차는 기하와 정상 상태 가정을 밝히고, 수송 및 반응 시간 척도를 추산한 뒤 결합 효과를 무시할 수 있는지 검토하는 것입니다. 모델이 고갈, 온도 구배 또는 변화하는 표면 피복을 예측한다면 이를 설명 없는 경험 상수에 흡수하지 말고 표현하거나 측정해야 합니다. 반응기 설계와 최적화에는 수송 모델이 쓰이지만, 신뢰성은 해당 장치의 경계 조건 및 검증 데이터에 달려 있습니다 <a class="citation" href="../references.html#ref-r05" aria-label="On the modelling of transport phenomena in chemical vapour deposition and its use in reactor design and process optimization">[r05]</a>.</p></section>
+  <section class="worked-example"><h2>계산 예제</h2><p>설명용 예시입니다. 앞서 명시한 선형 모델에서 C_b = 1 mol m⁻³, k_g = 0.020 m s⁻¹, k_s = 0.0050 m s⁻¹로 둡니다. 그러면 1/k_g = 50 s m⁻¹, 1/k_s = 200 s m⁻¹이므로 J = 1/(250) = 0.0040 mol m⁻² s⁻¹입니다. 표면 농도는 C_s = J/k_s = 0.80 mol m⁻³입니다. 이 예에서는 더 작은 표면 계수가 플럭스를 제한합니다. 선택한 값은 계산을 위한 입력값이지 권장 공정값이 아닙니다.</p></section>
+  <p class="related-lab"><a href="../lab.html#cvd-resistances">실험실 열기: CVD 속도 제한 요인 탐색기 →</a></p>
+  <section class="limitations"><h2>한계</h2><ul><li>직렬 저항식은 정상 상태 1차원 수송과 단일 반응물의 선형 1차 표면 소비를 가정하며 기상 화학과 결합 반응물을 제외합니다.</li><li>반응기별 유동장, 전구체 물성 또는 공정 창을 제시하지 않으므로 팹 레시피나 양산 균일도를 예측하지 않습니다.</li></ul></section>
+  <section><h2>복습 질문</h2><ol><li>표면 반응 제한 성장과 물질 전달 제한 성장을 구분하는 물리적 조건은 무엇인가?</li><li>직렬 저항 플럭스 관계를 유도하고 적용을 부적절하게 만드는 가정 두 가지를 말하라.</li><li>반응 로딩 증가가 하류 고갈을 어떻게 만들 수 있으며, 두께 지도만으로 균일도 문제를 놓칠 수 있는 이유는 무엇인가?</li></ol></section>
+  <section class="chapter-references"><h2>이 장의 참고문헌</h2><ul><li><a href="../references.html#ref-r05">M. J. G. V. M. Kleijn (1991). On the modelling of transport phenomena in chemical vapour deposition and its use in reactor design and process optimization.</a></li></ul></section>
+  <nav class="chapter-steps" aria-label="장 목록"><a class="chapter-step" rel="prev" href="05-pvd.html">← 이전 장: 물리적 기상 증착: 증발과 스퍼터링</a><a class="chapter-step next" rel="next" href="07-ald.html">다음 장: 원자층 증착: 사이클과 등각성 →</a></nav>
+</article><footer class="site-footer"><span>독립적으로 작성한 교육 자료 · 설명용 모델만 포함</span><a href="../license.html">라이선스·출처</a></footer></main>
+  </div>
+</body>
+</html>

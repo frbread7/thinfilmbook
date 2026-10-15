@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="에피택시: 격자 정합, 변형률, 결함 — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>에피택시: 격자 정합, 변형률, 결함 · ThinFilmBook</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script type="module" src="../../assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">ThinFilmBook</a>
+    <span class="subtitle">박막 과학 · 공학 모델</span>
+    <nav aria-label="주요 탐색">
+      <a href="../index.html">개요</a>
+      <a href="../lab.html">분석 실험실</a>
+      <a href="../references.html">참고문헌</a>
+      <a href="../license.html">라이선스·출처</a>
+    </nav>
+    <a class="language-link" lang="en" href="../../chapters/08-epitaxy.html">English</a>
+  </header>
+  <div class="page-layout">
+    <aside class="chapter-nav" aria-label="장 목록"><h2>모든 장</h2><a href="01-film-objectives.html"><span>01</span> 박막의 기능과 설계 목표</a><a href="02-growth-thermodynamics.html"><span>02</span> 박막 성장의 열역학적 구동력</a><a href="03-surface-kinetics.html"><span>03</span> 증착 중 표면 동역학</a><a href="04-nucleation-coalescence.html"><span>04</span> 핵생성에서 연결된 박막까지</a><a href="05-pvd.html"><span>05</span> 물리적 기상 증착: 증발과 스퍼터링</a><a href="06-cvd.html"><span>06</span> 화학 기상 증착: 수송과 반응</a><a href="07-ald.html"><span>07</span> 원자층 증착: 사이클과 등각성</a><a aria-current="page" href="08-epitaxy.html"><span>08</span> 에피택시: 격자 정합, 변형률, 결함</a><a href="interfaces.html"><span>09</span> 계면, 상호확산 및 상 발달</a><a href="stress-adhesion.html"><span>10</span> 박막 응력, 접착 및 박리</a><a href="metrology.html"><span>11</span> 박막 계측과 측정 모델</a><a href="integration.html"><span>12</span> 재료 목표에서 공정 통합까지</a></aside>
+    <main id="main"><article class="chapter-content" id="c08-epitaxy">
+  <p class="eyebrow">장 08 · 에피택시와 결정 격자의 수용</p>
+  <h1>에피택시: 격자 정합, 변형률, 결함</h1>
+  <p class="lede">계면을 가로지르는 결정 격자 정합, 격자 불일치 변형률, 정합 전위 형성의 임계 두께 설명이 지닌 한계를 소개합니다.</p>
+  <section class="objectives"><h2>학습 목표</h2><ul><li>에피택시 격자 정합을 정의하고 배향과 격자 일치를 구분한다.</li><li>명시한 규약에 따라 부호 있는 격자 불일치를 계산한다.</li><li>정합 변형률과 정합 전위가 유리해질 수 있는 에너지 상충 관계를 설명한다.</li><li>임계 두께 예측이 모델과 성장 조건에 따라 달라지는 이유를 설명한다.</li></ul></section>
+  <section><h2>계면에서의 결정 격자 정합</h2><p>에피택시는 증착층의 결정 배향이 아래 결정 기판과 일정한 관계를 갖는 성장을 말합니다. 격자 정합은 계면을 가로질러 격자 방향과 면이 어떻게 배열되는지를 뜻하며, 단순히 면외 우선 배향을 갖는 것과 다릅니다. 막과 기판의 격자 간격이 달라도 에피택시 정렬이 나타날 수 있으며, 대칭성과 표면 구조에 따라 여러 면내 정합이 가능할 수 있습니다 <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a>.</p><p>계면은 배향만으로 설명되지 않습니다. 화학적 종결, 재구성, 상호 확산, 결함, 성장 동역학은 제안된 격자 정합이 실제로 형성되고 전달되는지를 결정합니다. 따라서 측정된 배향 관계는 에피택시 주장을 뒷받침하지만, 그 자체로 결함 없는 계면, 정합 변형 상태 또는 특정 전기적 품질을 입증하지는 않습니다. 구조 및 조성 증거를 성장 맥락과 함께 해석해야 합니다.</p></section><section><h2>격자 불일치와 정합 변형률</h2><p>선택한 면내 격자상수 규약에서 부호 있는 불일치를 f = (a_f − a_s)/a_s로 정의합니다. 여기서 a_f는 완화된 막의 격자상수이고 a_s는 비교하는 방향에서의 기판 격자상수입니다. 이 규약에서 부호는 어느 격자가 더 큰지를 나타내지만, 불일치 크기만으로 변형률 수용 방식을 알 수는 없습니다. 비입방 재료, 이방성 표면 또는 도메인 정합 배열에서는 관련 면내 주기를 명확히 정의해야 합니다.</p><p>충분히 얇은 막은 정합 상태를 유지할 수 있습니다. 면내 격자가 기판 정합에 구속되어 탄성 변형률을 저장합니다. 작은 변형률을 가정한 단순 그림에서 막의 면내 변형률은 대략 (a_s − a_f)/a_f이며, 이는 f와 부호 규약이 반대이고 분모도 조금 다릅니다. 면외 완화와 탄성 에너지는 막의 탄성 상수 및 경계 조건에 좌우됩니다. 정합성은 계면 상태를 뜻할 뿐, 전체 결함 밀도가 낮거나 후속 공정 중 기계적으로 안정함을 보장하지 않습니다 <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a>.</p></section><section><h2>정합 전위와 임계 두께</h2><p>정합층이 두꺼워지면 불일치로 저장된 탄성 에너지는 일반적으로 막 두께와 함께 증가합니다. 정합 전위를 도입하면 탄성 에너지 일부를 줄일 수 있지만 선 및 코어 에너지가 듭니다. 이 상충 관계에서 임계 두께 개념이 나옵니다. 모델에 따른 특정 두께를 넘으면 전위를 포함한 완화 상태가 에너지상 유리해질 수 있습니다. 버거스 벡터, 전위선 방향, 계면 기하, 탄성 이방성, 기존 결함도 균형에 영향을 줍니다.</p><p>Matthews-Blakeslee 힘 평형 분석을 포함한 고전적 임계 두께 모델은 선택된 이상화 에피택시 계에서 유용한 스케일링 논거를 제공합니다 <a class="citation" href="../references.html#ref-r07" aria-label="Defects in epitaxial multilayers: I. Misfit dislocations">[r07]</a>. 그러나 실제 막이 반드시 따라야 할 보편 임계값은 주지 않습니다. 예측은 불일치와 기하의 정의, 전위 특성 및 평형에 관한 가정, 재료 탄성 물성에 좌우됩니다. 실제 전위는 단차, 가장자리, 결함 또는 계면에서 핵생성할 수 있고 동역학적으로 지연될 수 있습니다. 막이 모델 밖의 방식으로 완화될 수도 있습니다. 예측 임계 두께는 가정을 명시한 모델 추정치이지 제조 한계가 아닙니다.</p></section><section><h2>배향, 결함, 증거</h2><p>배향 관계는 가능한 불일치 성분과 결함 배열에 영향을 주지만 배향이 변형 완화 방식을 하나로 결정하지는 않습니다. 도메인, 쌍정, 적층 결함, 관통 전위, 계면 정합 전위가 함께 존재할 수 있습니다. 이들의 분포는 표면 준비, 핵생성, 성장 온도, 증착률, 두께, 후속 열 또는 기계적 이력에 영향을 받습니다. 따라서 박막 결함 형성은 격자 수치 하나의 직접 결과가 아니라 시간에 따른 변화 문제입니다 <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a>.</p><p>에피택시와 완화를 평가하려면 상호 보완적인 증거가 필요합니다. 회절은 배향, 격자 간격, 변형률 신호를 보여줄 수 있고, 현미경은 국소 계면 구조와 결함을 분해할 수 있습니다. 각 방법은 관찰 체적과 해석 한계가 다릅니다. 피크 위치는 조성, 온도, 보정, 변형률의 영향을 받을 수 있습니다. 결론에는 비교한 결정 방향, 불일치 규약, 막이 정합 또는 완화되었다는 판단, 그 판단을 뒷받침하는 증거를 밝혀야 합니다.</p></section>
+  <section class="worked-example"><h2>계산 예제</h2><p>설명용 산술 예시입니다. 선택한 방향에서 완화된 막 격자상수를 a_f = 0.404 nm, 기판 격자상수를 a_s = 0.400 nm로 둡니다. f = (a_f − a_s)/a_s에 따라 f = (0.004 nm)/(0.400 nm) = +0.010, 즉 +1.0%입니다. 이 규약에서 양의 부호는 완화된 막의 간격이 더 크다는 뜻입니다. 이 값만으로 정합 변형률, 전위 발생 시점, 임계 두께를 예측할 수는 없습니다.</p></section>
+
+  <section class="limitations"><h2>한계</h2><ul><li>불일치 정의는 선택한 면내 격자상수를 비교하며, 별도 명시 없이 이방성, 도메인 정합 또는 재구성 계면을 대표하지 않을 수 있습니다.</li><li>임계 두께 모델은 기하, 전위 에너지, 평형화를 이상화하므로 추정치는 보편 임계값이나 검증된 공정 한계가 아닙니다.</li></ul></section>
+  <section><h2>복습 질문</h2><ol><li>에피택시 격자 정합은 우선 배향과 어떻게 다르며, 배향 측정만으로 입증할 수 없는 것은 무엇인가?</li><li>이 장의 규약으로 a_f = 0.510 nm, a_s = 0.500 nm일 때 f를 계산하고 부호를 해석하라.</li><li>정합 전위 형성의 에너지 상충 관계를 설명하고 임계 두께 예측이 관측된 완화와 달라질 수 있는 이유 두 가지를 말하라.</li></ol></section>
+  <section class="chapter-references"><h2>이 장의 참고문헌</h2><ul><li><a href="../references.html#ref-r06">L. B. Freund and S. Suresh (2003). Thin Film Materials: Stress, Defect Formation and Surface Evolution.</a></li><li><a href="../references.html#ref-r07">J. W. Matthews and A. E. Blakeslee (1974). Defects in epitaxial multilayers: I. Misfit dislocations.</a></li></ul></section>
+  <nav class="chapter-steps" aria-label="장 목록"><a class="chapter-step" rel="prev" href="07-ald.html">← 이전 장: 원자층 증착: 사이클과 등각성</a><a class="chapter-step next" rel="next" href="interfaces.html">다음 장: 계면, 상호확산 및 상 발달 →</a></nav>
+</article><footer class="site-footer"><span>독립적으로 작성한 교육 자료 · 설명용 모델만 포함</span><a href="../license.html">라이선스·출처</a></footer></main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{
+    "schemaVersion": 1,
+    "id": "c05-pvd",
+    "slug": "05-pvd",
+    "number": 5,
+    "group": "g3",
+    "title": {
+        "en": "Physical Vapor Deposition: Evaporation and Sputtering",
+        "ko": "\ubb3c\ub9ac\uc801 \uae30\uc0c1 \uc99d\ucc29: \uc99d\ubc1c\uacfc \uc2a4\ud37c\ud130\ub9c1"
+    },
+    "summary": {
+        "en": "Compares evaporation and sputtering through source physics, transport, reactive operation, and the energetic conditions that shape deposited-film microstructure.",
+        "ko": "\uc99d\ubc1c\uacfc \uc2a4\ud37c\ud130\ub9c1\uc744 \uc18c\uc2a4 \ubb3c\ub9ac, \uc218\uc1a1, \ubc18\uc751\uc131 \uc6b4\uc804, \uadf8\ub9ac\uace0 \uc99d\ucc29\ub9c9 \ubbf8\uc138\uad6c\uc870\ub97c \ud615\uc131\ud558\ub294 \uc5d0\ub108\uc9c0 \uc870\uac74\uc744 \uc911\uc2ec\uc73c\ub85c \ube44\uad50\ud569\ub2c8\ub2e4."
+    },
+    "objectives": {
+        "en": [
+            "Distinguish the source and transport mechanisms of evaporation and sputtering.",
+            "Explain when line-of-sight geometry is a useful approximation and when gas scattering matters.",
+            "Describe target poisoning and the coupled feedback in reactive sputtering.",
+            "Interpret energetic-particle effects and structure-zone models as conditional heuristics."
+        ],
+        "ko": [
+            "\uc99d\ubc1c\uacfc \uc2a4\ud37c\ud130\ub9c1\uc758 \uc18c\uc2a4 \ubc0f \uc218\uc1a1 \uba54\ucee4\ub2c8\uc998\uc744 \uad6c\ubd84\ud55c\ub2e4.",
+            "\uc9c1\uc9c4 \uc2dc\uc57c \uae30\ud558\uac00 \uc720\uc6a9\ud55c \uadfc\uc0ac\uc778 \uacbd\uc6b0\uc640 \uae30\uccb4 \uc0b0\ub780\uc774 \uc911\uc694\ud55c \uacbd\uc6b0\ub97c \uc124\uba85\ud55c\ub2e4.",
+            "\ubc18\uc751\uc131 \uc2a4\ud37c\ud130\ub9c1\uc5d0\uc11c \ud0c0\uae43 \ud53c\ub3c5\uacfc \uacb0\ud569\ub41c \ud53c\ub4dc\ubc31\uc744 \uc124\uba85\ud55c\ub2e4.",
+            "\uace0\uc5d0\ub108\uc9c0 \uc785\uc790\uc758 \uc601\ud5a5\uacfc \uad6c\uc870 \uc601\uc5ed \ubaa8\ub378\uc744 \uc870\uac74\ubd80 \uacbd\ud5d8\uce59\uc73c\ub85c \ud574\uc11d\ud55c\ub2e4."
+        ]
+    },
+    "sections": {
+        "en": [
+            {
+                "heading": "Two routes from source to film",
+                "paragraphs": [
+                    "In thermal evaporation, heating raises the vapor pressure of a source and atoms or molecules leave its surface. In sputtering, ions accelerated through a plasma transfer momentum to a target and eject target species. Both methods create a vapor-phase flux that condenses on a substrate, but their source distributions, particle energies, and practical material constraints differ. Neither name alone specifies a film: substrate temperature, surface condition, geometry, residual gases, and flux history also affect incorporation and subsequent evolution [[r01]].",
+                    "A simple geometric model treats emitted particles as traveling in straight lines. For an ideal point source with angular intensity proportional to cos\u207f\u03b8, the flux arriving on a small planar surface includes both source angular emission and the receiving-surface cosine projection; shadowing and source-to-substrate distance then determine thickness patterns. Real sources have finite size, changing shape, nonuniform erosion or heating, and fixtures that block flux. The line-of-sight picture is therefore a starting model for geometry, not a guarantee of conformal coverage or uniform thickness."
+                ]
+            },
+            {
+                "heading": "Transport through the gas",
+                "paragraphs": [
+                    "In a sufficiently rarefied path, a substantial fraction of vapor travels from source to substrate without a collision. As gas density or path length increases, collisions redirect and thermalize particles; the arriving flux becomes less directional and may lose energy. The relevant comparison is between a species' mean free path and the characteristic travel distance. A single mean-free-path estimate is only approximate because cross sections depend on species and energy, and the chamber contains a distribution of paths and collisions.",
+                    "Scattering can soften geometric shadowing, but it does not by itself ensure uniform or conformal growth. It can also reduce the directed flux reaching recessed regions and alter the energy distribution at the surface. In sputtering, energetic neutrals and ions can add resputtering, defect creation, or enhanced surface mobility; their effects depend on energy, incidence, material, and substrate response. These mechanisms couple transport to growth kinetics and stress, so a thickness map alone cannot identify the cause of a microstructural change [[r06]]."
+                ]
+            },
+            {
+                "heading": "Reactive sputtering and target poisoning",
+                "paragraphs": [
+                    "Reactive sputtering introduces a reactive gas that can combine with sputtered target atoms at the substrate, in the gas phase, or on chamber surfaces. The target itself can become covered by a compound. This target poisoning often changes sputter yield and discharge behavior, while reactive-gas consumption changes with the target's surface state. Gas flow, pumping, target condition, and plasma response therefore form a coupled system rather than independent settings.",
+                    "A qualitative feedback loop explains why a small change in reactive-gas supply may produce a large change in operating state: more reactive gas can increase compound coverage; altered coverage can reduce metal sputter flux and reactive-gas gettering; the resulting gas composition can then reinforce or reverse the coverage change. Hysteresis may result, so the state can depend on the path used to reach a nominal operating point. This description predicts neither a universal transition point nor a stable recipe. Process control must be specific to the reactor and material system."
+                ]
+            },
+            {
+                "heading": "Energetics and structure-zone heuristics",
+                "paragraphs": [
+                    "Deposited structure reflects competition among adatom mobility, arrival rate, shadowing, impurities, and bombardment. Low surface mobility can preserve open, porous columns; increased mobility can promote denser growth, while excessive bombardment may cause damage, resputtering, or stress. Substrate temperature is often normalized by a material's melting temperature in structure-zone discussions, but this ratio does not capture all controlling variables, especially energetic-particle flux, pressure, chemistry, and substrate condition.",
+                    "Structure-zone diagrams, including Thornton's treatment of sputtered coatings, organize observed trends using selected process variables and are useful for hypothesis formation [[r04]]. They are not universal phase diagrams or predictive laws. Two systems at nominally similar temperature and pressure can differ because species energies, ion bombardment, surface chemistry, and geometry differ. Use the diagrams to ask which mechanisms may dominate, then test the inference with film density, morphology, stress, composition, and electrical or optical measurements appropriate to the application."
+                ]
+            }
+        ],
+        "ko": [
+            {
+                "heading": "\uc18c\uc2a4\uc5d0\uc11c \ub9c9\uae4c\uc9c0\uc758 \ub450 \uacbd\ub85c",
+                "paragraphs": [
+                    "\uc5f4 \uc99d\ubc1c\uc5d0\uc11c\ub294 \uc18c\uc2a4\ub97c \uac00\uc5f4\ud574 \uc99d\uae30\uc555\uc744 \ub192\uc774\uace0 \uc6d0\uc790\ub098 \ubd84\uc790\uac00 \ud45c\uba74\uc5d0\uc11c \ubc29\ucd9c\ub418\uac8c \ud569\ub2c8\ub2e4. \uc2a4\ud37c\ud130\ub9c1\uc5d0\uc11c\ub294 \ud50c\ub77c\uc2a4\ub9c8\uc5d0\uc11c \uac00\uc18d\ub41c \uc774\uc628\uc774 \ud0c0\uae43\uc5d0 \uc6b4\ub3d9\ub7c9\uc744 \uc804\ub2ec\ud574 \ud0c0\uae43 \uc885\uc744 \ubc29\ucd9c\uc2dc\ud0b5\ub2c8\ub2e4. \ub450 \ubc29\ubc95 \ubaa8\ub450 \uae30\uc0c1 \ud50c\ub7ed\uc2a4\ub97c \ub9cc\ub4e4\uace0 \uae30\ud310\uc5d0\uc11c \uc751\ucd95\uc2dc\ud0a4\uc9c0\ub9cc, \uc18c\uc2a4\uc758 \uac01\ub3c4 \ubd84\ud3ec, \uc785\uc790 \uc5d0\ub108\uc9c0, \uc2e4\uc6a9 \uc7ac\ub8cc \uc81c\uc57d\uc740 \ub2e4\ub985\ub2c8\ub2e4. \uacf5\uc815 \uba85\uce6d\ub9cc\uc73c\ub85c \ub9c9\uc758 \ud2b9\uc131\uc774 \uc815\ud574\uc9c0\uc9c0\ub294 \uc54a\uc2b5\ub2c8\ub2e4. \uae30\ud310 \uc628\ub3c4\uc640 \ud45c\uba74 \uc0c1\ud0dc, \uae30\ud558, \uc794\ub958 \uae30\uccb4, \ud50c\ub7ed\uc2a4 \uc774\ub825\ub3c4 \ubb3c\uc9c8 \ud3b8\uc785\uacfc \ud6c4\uc18d \ubcc0\ud654\ub97c \uc88c\uc6b0\ud569\ub2c8\ub2e4 [[r01]].",
+                    "\ub2e8\uc21c \uae30\ud558 \ubaa8\ub378\uc740 \ubc29\ucd9c\ub41c \uc785\uc790\uac00 \uc9c1\uc120\uc73c\ub85c \uc774\ub3d9\ud55c\ub2e4\uace0 \uac00\uc815\ud569\ub2c8\ub2e4. \uac01\ub3c4 \uc138\uae30\uac00 cos\u207f\u03b8\uc5d0 \ube44\ub840\ud558\ub294 \uc774\uc0c1\uc801 \uc810 \uc18c\uc2a4\ub77c\uba74 \uc791\uc740 \ud3c9\uba74\uc5d0 \ub3c4\ub2ec\ud558\ub294 \ud50c\ub7ed\uc2a4\uc5d0\ub294 \uc18c\uc2a4\uc758 \uac01\ub3c4 \ubc29\ucd9c\uacfc \uc218\uc6a9\uba74\uc758 \ucf54\uc0ac\uc778 \ud22c\uc601\uc774 \ud568\uaed8 \ubc18\uc601\ub418\uba70, \ucc28\ud3d0\uc640 \uc18c\uc2a4-\uae30\ud310 \uac70\ub9ac\uac00 \ub450\uaed8 \ubd84\ud3ec\ub97c \uacb0\uc815\ud569\ub2c8\ub2e4. \uc2e4\uc81c \uc18c\uc2a4\ub294 \uc720\ud55c\ud55c \ud06c\uae30\uc640 \ubcc0\ud654\ud558\ub294 \ud615\uc0c1, \ubd88\uade0\uc77c\ud55c \uce68\uc2dd \ub610\ub294 \uac00\uc5f4\uc744 \uac00\uc9c0\uba70 \uace0\uc815\uad6c\uac00 \ud50c\ub7ed\uc2a4\ub97c \ub9c9\uae30\ub3c4 \ud569\ub2c8\ub2e4. \ub530\ub77c\uc11c \uc9c1\uc9c4 \uc2dc\uc57c \uadf8\ub9bc\uc740 \uae30\ud558\ub97c \uc774\ud574\ud558\uae30 \uc704\ud55c \uc2dc\uc791 \ubaa8\ub378\uc774\uc9c0, \uade0\uc77c \ub450\uaed8\ub098 \ub4f1\uac01 \ud53c\ubcf5\uc744 \ubcf4\uc7a5\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."
+                ]
+            },
+            {
+                "heading": "\uae30\uccb4 \ub0b4 \uc218\uc1a1",
+                "paragraphs": [
+                    "\ucda9\ubd84\ud788 \ud76c\ubc15\ud55c \uc774\ub3d9 \uacbd\ub85c\uc5d0\uc11c\ub294 \uc0c1\ub2f9\uc218 \uc99d\uae30 \uc785\uc790\uac00 \ucda9\ub3cc \uc5c6\uc774 \uc18c\uc2a4\uc5d0\uc11c \uae30\ud310\uae4c\uc9c0 \uc774\ub3d9\ud569\ub2c8\ub2e4. \uae30\uccb4 \ubc00\ub3c4\ub098 \uc774\ub3d9 \uac70\ub9ac\uac00 \ucee4\uc9c0\uba74 \ucda9\ub3cc\uc774 \uc785\uc790\uc758 \ubc29\ud5a5\uc744 \ubc14\uafb8\uace0 \uc5f4\ud3c9\ud615\ud654\ud558\uba70, \ub3c4\ub2ec \ud50c\ub7ed\uc2a4\ub294 \ub35c \ubc29\ud5a5\uc131\uc744 \ub760\uace0 \uc5d0\ub108\uc9c0\ub97c \uc783\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4. \ud575\uc2ec \ube44\uad50\ub7c9\uc740 \uc885\ubcc4 \ud3c9\uade0 \uc790\uc720 \ud589\ub85c\uc640 \ub300\ud45c \uc774\ub3d9 \uac70\ub9ac\uc785\ub2c8\ub2e4. \ub2e8\uc77c \ud3c9\uade0 \uc790\uc720 \ud589\ub85c \ucd94\uc0b0\uc740 \uadfc\uc0ac\uce58\uc77c \ubfd0\uc778\ub370, \ub2e8\uba74\uc801\uc774 \uc885\uacfc \uc5d0\ub108\uc9c0\uc5d0 \ub530\ub77c \ub2ec\ub77c\uc9c0\uace0 \ucc54\ubc84 \uc548\uc5d0\ub294 \ub2e4\uc591\ud55c \uacbd\ub85c\uc640 \ucda9\ub3cc \ud69f\uc218\uac00 \uc788\uae30 \ub54c\ubb38\uc785\ub2c8\ub2e4.",
+                    "\uc0b0\ub780\uc740 \uae30\ud558\ud559\uc801 \ucc28\ud3d0\ub97c \uc644\ud654\ud560 \uc218 \uc788\uc9c0\ub9cc \uadf8 \uc790\uccb4\ub85c \uade0\uc77c \uc131\uc7a5\uc774\ub098 \ub4f1\uac01 \uc131\uc7a5\uc744 \ubcf4\uc7a5\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc624\ud788\ub824 \uc6c0\ud479\ud55c \uc601\uc5ed\uc5d0 \ub3c4\ub2ec\ud558\ub294 \ubc29\ud5a5\uc131 \ud50c\ub7ed\uc2a4\ub97c \uc904\uc774\uace0 \ud45c\uba74 \ub3c4\ub2ec \uc5d0\ub108\uc9c0 \ubd84\ud3ec\ub97c \ubc14\uafc0 \uc218 \uc788\uc2b5\ub2c8\ub2e4. \uc2a4\ud37c\ud130\ub9c1\uc5d0\uc11c\ub294 \uace0\uc5d0\ub108\uc9c0 \uc911\uc131\uc885\uacfc \uc774\uc628\uc774 \uc7ac\uc2a4\ud37c\ud130\ub9c1, \uacb0\ud568 \uc0dd\uc131, \ud45c\uba74 \uc774\ub3d9\uc131 \ud5a5\uc0c1\uc5d0 \uae30\uc5ec\ud560 \uc218 \uc788\uc73c\uba70, \uc601\ud5a5\uc740 \uc5d0\ub108\uc9c0, \uc785\uc0ac\uac01, \uc7ac\ub8cc, \uae30\ud310 \uc751\ub2f5\uc5d0 \uc88c\uc6b0\ub429\ub2c8\ub2e4. \uc774\ub7f0 \uba54\ucee4\ub2c8\uc998\uc740 \uc218\uc1a1\uc744 \uc131\uc7a5 \ub3d9\uc5ed\ud559 \ubc0f \uc751\ub825\uacfc \uacb0\ud569\ud558\ubbc0\ub85c \ub450\uaed8 \uc9c0\ub3c4\ub9cc\uc73c\ub85c \ubbf8\uc138\uad6c\uc870 \ubcc0\ud654\uc758 \uc6d0\uc778\uc744 \ud2b9\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4 [[r06]]."
+                ]
+            },
+            {
+                "heading": "\ubc18\uc751\uc131 \uc2a4\ud37c\ud130\ub9c1\uacfc \ud0c0\uae43 \ud53c\ub3c5",
+                "paragraphs": [
+                    "\ubc18\uc751\uc131 \uc2a4\ud37c\ud130\ub9c1\uc740 \ubc18\uc751\uc131 \uae30\uccb4\ub97c \ub3c4\uc785\ud574 \uc2a4\ud37c\ud130\ub41c \ud0c0\uae43 \uc6d0\uc790\uac00 \uae30\ud310, \uae30\uc0c1 \ub610\ub294 \ucc54\ubc84 \ud45c\uba74\uc5d0\uc11c \ubc18\uc751\ud558\uac8c \ud569\ub2c8\ub2e4. \ud0c0\uae43 \uc790\uccb4\uac00 \ud654\ud569\ubb3c\ub85c \ub36e\uc77c \uc218\ub3c4 \uc788\uc2b5\ub2c8\ub2e4. \uc774\ub7ec\ud55c \ud0c0\uae43 \ud53c\ub3c5\uc740 \uc2a4\ud37c\ud130 \uc218\uc728\uacfc \ubc29\uc804 \uac70\ub3d9\uc744 \ubc14\uafb8\ub294 \uacbd\uc6b0\uac00 \ub9ce\uace0, \ubc18\uc751\uc131 \uae30\uccb4 \uc18c\ube44\ub7c9\ub3c4 \ud0c0\uae43 \ud45c\uba74 \uc0c1\ud0dc\uc5d0 \ub530\ub77c \ubcc0\ud569\ub2c8\ub2e4. \ub530\ub77c\uc11c \uae30\uccb4 \uc720\ub7c9, \ubc30\uae30, \ud0c0\uae43 \uc0c1\ud0dc, \ud50c\ub77c\uc2a4\ub9c8 \uc751\ub2f5\uc740 \uc11c\ub85c \ub3c5\ub9bd\uc801\uc778 \uc124\uc815\uc774 \uc544\ub2c8\ub77c \uacb0\ud569\ub41c \uc2dc\uc2a4\ud15c\uc744 \uc774\ub8f9\ub2c8\ub2e4.",
+                    "\uc791\uc740 \ubc18\uc751\uc131 \uae30\uccb4 \uacf5\uae09 \ubcc0\ud654\uac00 \ud070 \uc6b4\uc804 \uc0c1\ud0dc \ubcc0\ud654\ub85c \uc774\uc5b4\uc9c8 \uc218 \uc788\ub294 \uc774\uc720\ub294 \uc815\uc131\uc801 \ud53c\ub4dc\ubc31 \uace0\ub9ac\ub85c \uc124\uba85\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4. \ubc18\uc751\uc131 \uae30\uccb4\uac00 \ub298\uba74 \ud654\ud569\ubb3c \ud53c\ubcf5\uc774 \uc99d\uac00\ud558\uace0, \ubc14\ub010 \ud53c\ubcf5\uc740 \uae08\uc18d \uc2a4\ud37c\ud130 \ud50c\ub7ed\uc2a4\uc640 \ubc18\uc751\uc131 \uae30\uccb4 \uac8c\ud130\ub9c1\uc744 \uac10\uc18c\uc2dc\ud0ac \uc218 \uc788\uc73c\uba70, \uadf8 \uacb0\uacfc \uae30\uccb4 \uc870\uc131\uc774 \ud53c\ubcf5 \ubcc0\ud654\ub97c \uac15\ud654\ud558\uac70\ub098 \ub418\ub3cc\ub9bd\ub2c8\ub2e4. \uacbd\ub85c\uc5d0 \ub530\ub77c \uc0c1\ud0dc\uac00 \ub2ec\ub77c\uc9c0\ub294 \ud788\uc2a4\ud14c\ub9ac\uc2dc\uc2a4\uac00 \uc0dd\uae38 \uc218 \uc788\uc73c\ubbc0\ub85c, \uac19\uc740 \uba85\ubaa9 \uc6b4\uc804\uc810\uc5d0 \ub3c4\ub2ec\ud558\ub294 \uacbd\ub85c\ub3c4 \uc911\uc694\ud569\ub2c8\ub2e4. \uc774 \uc124\uba85\uc73c\ub85c \ubcf4\ud3b8\uc801\uc778 \uc804\uc774\uc810\uc774\ub098 \uc548\uc815 \ub808\uc2dc\ud53c\ub97c \uc608\uce21\ud560 \uc218\ub294 \uc5c6\uc2b5\ub2c8\ub2e4. \uacf5\uc815 \uc81c\uc5b4\ub294 \ubc18\uc751\uae30\uc640 \uc7ac\ub8cc\uacc4\uc5d0 \ub9de\ucdb0\uc57c \ud569\ub2c8\ub2e4."
+                ]
+            },
+            {
+                "heading": "\uc5d0\ub108\uc9c0\uc640 \uad6c\uc870 \uc601\uc5ed \uacbd\ud5d8\uce59",
+                "paragraphs": [
+                    "\uc99d\ucc29 \uad6c\uc870\ub294 \ud761\ucc29 \uc6d0\uc790\uc758 \uc774\ub3d9\uc131, \ub3c4\ub2ec\ub960, \ucc28\ud3d0, \ubd88\uc21c\ubb3c, \uc785\uc790 \ucda9\ub3cc \ud6a8\uacfc \uac04 \uacbd\uc7c1\uc744 \ubc18\uc601\ud569\ub2c8\ub2e4. \ud45c\uba74 \uc774\ub3d9\uc131\uc774 \ub0ae\uc73c\uba74 \uc5f4\ub9b0 \ub2e4\uacf5\uc131 \uae30\ub465 \uad6c\uc870\uac00 \uc720\uc9c0\ub420 \uc218 \uc788\uace0, \uc774\ub3d9\uc131\uc774 \ucee4\uc9c0\uba74 \uce58\ubc00\ud55c \uc131\uc7a5\uc774 \ucd09\uc9c4\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4. \ubc18\uba74 \uacfc\ub3c4\ud55c \ucda9\ub3cc\uc740 \uc190\uc0c1, \uc7ac\uc2a4\ud37c\ud130\ub9c1 \ub610\ub294 \uc751\ub825\uc744 \uc77c\uc73c\ud0ac \uc218 \uc788\uc2b5\ub2c8\ub2e4. \uad6c\uc870 \uc601\uc5ed \ub17c\uc758\uc5d0\uc11c\ub294 \uae30\ud310 \uc628\ub3c4\ub97c \uc7ac\ub8cc\uc758 \uc735\uc810\uc73c\ub85c \uc815\uaddc\ud654\ud558\uae30\ub3c4 \ud558\uc9c0\ub9cc, \uc774 \ube44\uc728\ub9cc\uc73c\ub85c\ub294 \uc785\uc790 \uc5d0\ub108\uc9c0, \uc774\uc628 \ucda9\ub3cc, \uc555\ub825, \ud654\ud559 \ubc0f \uae30\ud310 \uc0c1\ud0dc \ub4f1 \ubaa8\ub4e0 \uc9c0\ubc30 \ubcc0\uc218\ub97c \ud45c\ud604\ud558\uc9c0 \ubabb\ud569\ub2c8\ub2e4.",
+                    "Thornton\uc758 \uc2a4\ud37c\ud130 \ucf54\ud305 \ubd84\uc11d\uc744 \ud3ec\ud568\ud55c \uad6c\uc870 \uc601\uc5ed \ub3c4\ud45c\ub294 \uc120\ud0dd\ud55c \uacf5\uc815 \ubcc0\uc218\uc5d0 \ub530\ub978 \uad00\uce21 \uacbd\ud5a5\uc744 \uc815\ub9ac\ud574 \uac00\uc124\uc744 \uc138\uc6b0\ub294 \ub370 \uc720\uc6a9\ud569\ub2c8\ub2e4 [[r04]]. \uadf8\ub7ec\ub098 \ubcf4\ud3b8\uc801 \uc0c1\ub3c4\ub098 \uc608\uce21 \ubc95\uce59\uc740 \uc544\ub2d9\ub2c8\ub2e4. \uba85\ubaa9\uc0c1 \uc628\ub3c4\uc640 \uc555\ub825\uc774 \ube44\uc2b7\ud574\ub3c4 \uc785\uc790 \uc5d0\ub108\uc9c0, \uc774\uc628 \ucda9\ub3cc, \ud45c\uba74 \ud654\ud559\uacfc \uae30\ud558\uac00 \ub2e4\ub974\uba74 \uacb0\uacfc\ub3c4 \ub2e4\ub97c \uc218 \uc788\uc2b5\ub2c8\ub2e4. \ub3c4\ud45c\ub97c \ud1b5\ud574 \uc5b4\ub5a4 \uba54\ucee4\ub2c8\uc998\uc774 \uc9c0\ubc30\uc801\uc77c\uc9c0 \uc9c8\ubb38\ud55c \ub2e4\uc74c, \uc751\uc6a9\uc5d0 \ub9de\ub294 \ub9c9 \ubc00\ub3c4, \ud615\ud0dc, \uc751\ub825, \uc870\uc131, \uc804\uae30\uc801 \ub610\ub294 \uad11\ud559\uc801 \uce21\uc815\uc73c\ub85c \ucd94\ub860\uc744 \uac80\uc99d\ud569\ub2c8\ub2e4."
+                ]
+            }
+        ]
+    },
+    "workedExample": {
+        "en": "Illustrative geometric estimate only: assume a point source emits with angular intensity proportional to cos \u03b8 (n = 1), a small horizontal substrate faces the source, and the source-to-substrate distance is fixed. At a substrate point displaced laterally by x from the axis and vertically separated by h, the path makes angle \u03b8 = arctan(x/h) to the normal and has length r = \u221a(h\u00b2+x\u00b2). The source angular factor and receiving-surface projection together scale as cos\u00b2\u03b8/r\u00b2, which simplifies to h\u00b2/(h\u00b2+x\u00b2)\u00b2. For x = h, this factor is 1/(4h\u00b2), one quarter of its on-axis value 1/h\u00b2. This ratio ignores finite source size, scattering, shadowing, source evolution, and re-emission; it is not a process prediction.",
+        "ko": "\uc124\uba85\uc6a9 \uae30\ud558 \ucd94\uc0b0\uc77c \ubfd0\uc785\ub2c8\ub2e4. \uc810 \uc18c\uc2a4\uc758 \uac01\ub3c4 \uc138\uae30\uac00 cos \u03b8\uc5d0 \ube44\ub840\ud558\uace0(n = 1), \uc791\uc740 \uc218\ud3c9 \uae30\ud310\uc774 \uc18c\uc2a4\ub97c \ud5a5\ud558\uba70 \uc18c\uc2a4-\uae30\ud310 \uac70\ub9ac\uac00 \uace0\uc815\ub418\uc5c8\ub2e4\uace0 \uac00\uc815\ud569\ub2c8\ub2e4. \ucd95\uc5d0\uc11c \uc606\uc73c\ub85c x\ub9cc\ud07c, \uc218\uc9c1\uc73c\ub85c h\ub9cc\ud07c \ub5a8\uc5b4\uc9c4 \uae30\ud310 \uc9c0\uc810\uc5d0\uc11c \ubc95\uc120 \uae30\uc900 \uacbd\ub85c\uac01\uc740 \u03b8 = arctan(x/h), \uacbd\ub85c \uae38\uc774\ub294 r = \u221a(h\u00b2+x\u00b2)\uc785\ub2c8\ub2e4. \uc18c\uc2a4 \uac01\ub3c4 \uc778\uc790\uc640 \uc218\uc6a9\uba74 \ud22c\uc601\uc744 \uacf1\ud558\uba74 cos\u00b2\u03b8/r\u00b2\uc5d0 \ube44\ub840\ud558\uba70, \uc774\ub294 h\u00b2/(h\u00b2+x\u00b2)\u00b2\ub85c \uc815\ub9ac\ub429\ub2c8\ub2e4. x = h\uc77c \ub54c \uc774 \uc778\uc790\ub294 1/(4h\u00b2)\ub85c \ucd95\uc0c1 \uac12 1/h\u00b2\uc758 4\ubd84\uc758 1\uc785\ub2c8\ub2e4. \uc774 \ube44\uc728\uc740 \uc720\ud55c \uc18c\uc2a4 \ud06c\uae30, \uc0b0\ub780, \ucc28\ud3d0, \uc18c\uc2a4 \ubcc0\ud654, \uc7ac\ubc29\ucd9c\uc744 \ubb34\uc2dc\ud558\ubbc0\ub85c \uacf5\uc815 \uc608\uce21\uac12\uc774 \uc544\ub2d9\ub2c8\ub2e4."
+    },
+    "limitations": {
+        "en": [
+            "The line-of-sight and point-source relations are geometric idealizations; they omit chamber-specific scattering, evolving sources, and surface re-emission.",
+            "Reactive-sputtering feedback and structure-zone descriptions are qualitative or heuristic and do not supply transferable operating recipes or universal boundaries."
+        ],
+        "ko": [
+            "\uc9c1\uc9c4 \uc2dc\uc57c \uad00\uacc4\uc640 \uc810 \uc18c\uc2a4 \uc2dd\uc740 \uae30\ud558\ud559\uc801 \uc774\uc0c1\ud654\uc774\uba70, \ucc54\ubc84\ubcc4 \uc0b0\ub780, \ubcc0\ud654\ud558\ub294 \uc18c\uc2a4, \ud45c\uba74 \uc7ac\ubc29\ucd9c\uc744 \uc0dd\ub7b5\ud569\ub2c8\ub2e4.",
+            "\ubc18\uc751\uc131 \uc2a4\ud37c\ud130\ub9c1 \ud53c\ub4dc\ubc31\uacfc \uad6c\uc870 \uc601\uc5ed \uc124\uba85\uc740 \uc815\uc131\uc801 \ub610\ub294 \uacbd\ud5d8\uc801\uc774\uba70, \ub2e4\ub978 \uc7a5\ube44\uc5d0 \uc804\uc6a9 \uac00\ub2a5\ud55c \uc6b4\uc804 \ub808\uc2dc\ud53c\ub098 \ubcf4\ud3b8\uc801 \uacbd\uacc4\ub97c \uc81c\uc2dc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."
+        ]
+    },
+    "questions": {
+        "en": [
+            "Which assumptions make a line-of-sight model useful, and what observations would indicate that scattering or source geometry must be included?",
+            "Explain one feedback path that can produce hysteresis during reactive sputtering, and identify why its transition point is reactor-specific.",
+            "Why should a structure-zone diagram be treated as a heuristic when predicting a film made under energetic bombardment?"
+        ],
+        "ko": [
+            "\uc9c1\uc9c4 \uc2dc\uc57c \ubaa8\ub378\uc744 \uc720\uc6a9\ud558\uac8c \ub9cc\ub4dc\ub294 \uac00\uc815\uc740 \ubb34\uc5c7\uc774\uba70, \uc0b0\ub780\uc774\ub098 \uc18c\uc2a4 \uae30\ud558\ub97c \uace0\ub824\ud574\uc57c \ud568\uc744 \ubcf4\uc5ec\uc8fc\ub294 \uad00\uce21\uc740 \ubb34\uc5c7\uc778\uac00?",
+            "\ubc18\uc751\uc131 \uc2a4\ud37c\ud130\ub9c1 \uc911 \ud788\uc2a4\ud14c\ub9ac\uc2dc\uc2a4\ub97c \ub9cc\ub4e4 \uc218 \uc788\ub294 \ud53c\ub4dc\ubc31 \uacbd\ub85c \ud558\ub098\ub97c \uc124\uba85\ud558\uace0 \uc804\uc774\uc810\uc774 \ubc18\uc751\uae30\ubcc4\ub85c \ub2ec\ub77c\uc9c0\ub294 \uc774\uc720\ub97c \ub9d0\ud558\ub77c.",
+            "\uace0\uc5d0\ub108\uc9c0 \ucda9\ub3cc \uc870\uac74\uc5d0\uc11c \ub9cc\ub4e0 \ub9c9\uc744 \uc608\uce21\ud560 \ub54c \uad6c\uc870 \uc601\uc5ed \ub3c4\ud45c\ub97c \uacbd\ud5d8\uce59\uc73c\ub85c \ub2e4\ub904\uc57c \ud558\ub294 \uc774\uc720\ub294 \ubb34\uc5c7\uc778\uac00?"
+        ]
+    },
+    "references": [
+        "r01",
+        "r04",
+        "r06"
+    ]
+}

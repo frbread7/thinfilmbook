@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="분석 실험실 — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>분석 실험실 · ThinFilmBook</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script type="module" src="../assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">ThinFilmBook</a>
+    <span class="subtitle">박막 과학 · 공학 모델</span>
+    <nav aria-label="주요 탐색">
+      <a href="index.html">개요</a>
+      <a href="lab.html">분석 실험실</a>
+      <a href="references.html">참고문헌</a>
+      <a href="license.html">라이선스·출처</a>
+    </nav>
+    <a class="language-link" lang="en" href="../lab.html">English</a>
+  </header>
+  <div class="page-layout">
+
+    <main id="main"><article><p class="eyebrow">ThinFilmBook · 분석 실험실</p><h1>분석 실험실</h1><p class="lede">설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p><div class="lab-list"><section class="lab-card" id="ald-conformality" aria-labelledby="title-ald-conformality">
+  <p class="eyebrow">이상화된 1차원 수송·포화 모델</p><h2 id="title-ald-conformality">ALD 피복성 탐색기</h2>
+  <p class="lab-description">무차원 수송 제한과 노출량을 바꾸어 이상화된 정상상태 구조 내 농도 및 1차 표면 피복률 프로파일을 살펴봅니다.</p><p class="assumption-note">설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p>
+  <form class="model-form" data-model="ald-conformality"><div class="field-grid"><label for="ald-phi">수송-반응 매개변수 φ<input id="ald-phi" name="ald-phi" type="number" value="1.5" min="0" max="8" step="0.1" inputmode="decimal" required></label><label for="ald-dose">무차원 노출량<input id="ald-dose" name="ald-dose" type="number" value="1" min="0" max="10" step="0.1" inputmode="decimal" required></label></div><button type="button" id="run-ald">계산</button></form>
+  <figure><svg id="ald-chart" viewBox="0 0 720 260" role="img" aria-label="정규화 깊이 프로파일"></svg><figcaption>정규화 깊이 프로파일 · 농도비 C/C₀ (파랑) · 이상화 피복률 θ (주황)</figcaption></figure><div class="model-result" id="result-ald-conformality" role="status" aria-live="polite"><span class="result-label">모델 출력</span><p>설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p></div>
+  <details class="model-limits"><summary>모델 가정과 한계</summary><p>일정 유효 확산계수, 1차 벽면 싱크, 단일 이상화 노출을 갖는 정상상태 1차원 구조를 가정합니다. 주기별 ALD 시뮬레이터가 아닙니다.</p></details>
+</section><section class="lab-card" id="cvd-resistances" aria-labelledby="title-cvd-resistances">
+  <p class="eyebrow">직렬 물질전달·반응 저항</p><h2 id="title-cvd-resistances">CVD 속도 제한 요인 탐색기</h2>
+  <p class="lab-description">정상상태 저차원 CVD 플럭스 모델에서 기체막 전달과 1차 표면 반응 저항을 비교합니다.</p><p class="assumption-note">설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p>
+  <form class="model-form" data-model="cvd-resistances"><div class="field-grid"><label for="cvd-concentration">벌크 농도 (mol/m³)<input id="cvd-concentration" name="cvd-concentration" type="number" value="1" min="0" max="1000000" step="0.1" inputmode="decimal" required></label><label for="cvd-km">기체 전달 계수 km (m/s)<input id="cvd-km" name="cvd-km" type="number" value="0.1" min="0.000001" max="10000" step="0.01" inputmode="decimal" required></label><label for="cvd-ks">표면 반응 계수 ks (m/s)<input id="cvd-ks" name="cvd-ks" type="number" value="0.1" min="0.000001" max="10000" step="0.01" inputmode="decimal" required></label></div><button type="button" id="run-cvd">계산</button></form>
+  <div class="model-result" id="result-cvd-resistances" role="status" aria-live="polite"><span class="result-label">모델 출력</span><p>설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p></div>
+  <details class="model-limits"><summary>모델 가정과 한계</summary><p>일정 계수를 갖는 정상상태 1차원 전달과 1차 표면 싱크를 가정합니다. 반응기 형상, 고갈, 기상 반응 또는 웨이퍼 규모 균일도는 모델링하지 않습니다.</p></details>
+</section><section class="lab-card" id="stoney-stress" aria-labelledby="title-stoney-stress">
+  <p class="eyebrow">등방성 Stoney 방정식 추정</p><h2 id="title-stoney-stress">곡률-응력 추정기</h2>
+  <p class="lab-description">명시된 등방성·박막 가정 아래 작은 곡률 변화로부터 부호를 포함한 평균 막 응력을 추정합니다.</p><p class="assumption-note">설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p>
+  <form class="model-form" data-model="stoney-stress"><div class="field-grid"><label for="stoney-modulus">기판 탄성률 E (GPa)<input id="stoney-modulus" name="stoney-modulus" type="number" value="180" min="1" max="1000" step="1" inputmode="decimal" required></label><label for="stoney-poisson">포아송비 ν<input id="stoney-poisson" name="stoney-poisson" type="number" value="0.28" min="0" max="0.49" step="0.01" inputmode="decimal" required></label><label for="stoney-substrate">기판 두께 (µm)<input id="stoney-substrate" name="stoney-substrate" type="number" value="500" min="1" max="10000" step="10" inputmode="decimal" required></label><label for="stoney-film">막 두께 (nm)<input id="stoney-film" name="stoney-film" type="number" value="100" min="0.1" max="100000" step="10" inputmode="decimal" required></label><label for="stoney-curvature">곡률 변화 Δκ (m⁻¹)<input id="stoney-curvature" name="stoney-curvature" type="number" value="0.1" min="-1000000" max="1000000" step="0.1" inputmode="decimal" required></label></div><button type="button" id="run-stoney">계산</button></form>
+  <div class="model-result" id="result-stoney-stress" role="status" aria-live="polite"><span class="result-label">모델 출력</span><p>설명용 모델입니다. 입력은 무차원 또는 가상 값이며 보정된 레시피, 설정값 또는 제조 권고가 아닙니다.</p></div>
+  <details class="model-limits"><summary>모델 가정과 한계</summary><p>등방성 탄성 기판, 균일한 박막, 작은 곡률 변화 및 등축 평균 응력을 가정합니다. 실리콘은 이방성이므로 실제 웨이퍼 해석에는 적절한 탄성 모델을 사용하십시오. 부호는 선택된 곡률 규약을 따르며 보편적인 인장/압축 표시가 아닙니다.</p></details>
+</section></div></article><footer class="site-footer"><span>독립적으로 작성한 교육 자료 · 설명용 모델만 포함</span><a href="license.html">라이선스·출처</a></footer></main>
+  </div>
+</body>
+</html>

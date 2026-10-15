@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="박막의 기능과 설계 목표 — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>박막의 기능과 설계 목표 · ThinFilmBook</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script type="module" src="../../assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">ThinFilmBook</a>
+    <span class="subtitle">박막 과학 · 공학 모델</span>
+    <nav aria-label="주요 탐색">
+      <a href="../index.html">개요</a>
+      <a href="../lab.html">분석 실험실</a>
+      <a href="../references.html">참고문헌</a>
+      <a href="../license.html">라이선스·출처</a>
+    </nav>
+    <a class="language-link" lang="en" href="../../chapters/01-film-objectives.html">English</a>
+  </header>
+  <div class="page-layout">
+    <aside class="chapter-nav" aria-label="장 목록"><h2>모든 장</h2><a aria-current="page" href="01-film-objectives.html"><span>01</span> 박막의 기능과 설계 목표</a><a href="02-growth-thermodynamics.html"><span>02</span> 박막 성장의 열역학적 구동력</a><a href="03-surface-kinetics.html"><span>03</span> 증착 중 표면 동역학</a><a href="04-nucleation-coalescence.html"><span>04</span> 핵생성에서 연결된 박막까지</a><a href="05-pvd.html"><span>05</span> 물리적 기상 증착: 증발과 스퍼터링</a><a href="06-cvd.html"><span>06</span> 화학 기상 증착: 수송과 반응</a><a href="07-ald.html"><span>07</span> 원자층 증착: 사이클과 등각성</a><a href="08-epitaxy.html"><span>08</span> 에피택시: 격자 정합, 변형률, 결함</a><a href="interfaces.html"><span>09</span> 계면, 상호확산 및 상 발달</a><a href="stress-adhesion.html"><span>10</span> 박막 응력, 접착 및 박리</a><a href="metrology.html"><span>11</span> 박막 계측과 측정 모델</a><a href="integration.html"><span>12</span> 재료 목표에서 공정 통합까지</a></aside>
+    <main id="main"><article class="chapter-content" id="c01-film-objectives">
+  <p class="eyebrow">장 01 · 박막의 기능과 열역학적 구동력</p>
+  <h1>박막의 기능과 설계 목표</h1>
+  <p class="lede">박막은 더 큰 적층 구조 안에서 기능하는 층으로 설계됩니다. 이 장에서는 그 기능을 두께, 조성, 균일도, 계면 및 신뢰성의 측정 가능한 목표로 바꾸는 방법을 설명합니다.</p>
+  <section class="objectives"><h2>학습 목표</h2><ul><li>소자 적층 구조에서 박막의 위치를 전기적, 광학적, 화학적 또는 기계적 기능과 연결한다.</li><li>두께, 조성, 균일도 및 계면 목표를 이를 달성하기 위한 공정 설정과 구분한다.</li><li>주장하려는 물성에 맞는 측정 규모와 불확도를 가진 분석법을 선택한다.</li></ul></section>
+  <section><h2>층의 기능에서 출발하기</h2><p>증착층은 대개 단독으로 작동하지 않습니다. 도전층은 전류를 전달하면서 확산을 막을 수 있고, 유전체는 전극을 분리하면서 전하를 저장할 수 있으며, 배리어는 화학종의 이동을 억제하고, 광학층은 위상이나 반사율을 조절할 수 있습니다. 설계 요구사항에는 필요한 기능과 인접 층의 제약을 함께 명시해야 합니다. 접착, 열 예산, 전기 접촉 및 후속 패터닝은 재료의 명목상 이름만큼 중요할 수 있습니다.</p><p>이러한 기능은 서로 상충할 수 있습니다. 두께를 늘리면 면저항을 낮추거나 광흡수를 높일 수 있지만 응력, 단차, 증착 시간 또는 균열 가능성도 커질 수 있습니다. 화학적으로 효과적인 배리어가 전기적으로는 지나치게 저항이 클 수도 있습니다. 따라서 박막 목표는 하나의 선호 숫자가 아니라 명시된 조건에서 허용 가능한 결과들의 집합입니다. 박막의 성장과 구조는 이러한 제약과 연결됩니다 <a class="citation" href="../references.html#ref-r01" aria-label="Nucleation and growth of thin films">[r01]</a>.</p></section><section><h2>기능을 측정 목표로 바꾸기</h2><p>두께는 기하학적 양이지만, 측정법에 따라 그 의미가 달라집니다. 물리적 단차 높이, X선 모델 두께, 광학적 유효 두께는 막이 거칠거나 다공성이거나 조성 구배 또는 혼합층을 가질 때 서로 다를 수 있습니다. 측정 대상량, 모델, 측정 위치 및 불확도를 밝혀야 합니다. 이상적으로 균일한 층에서는 면저항이 R_s = ρ/t로 비저항과 두께에 연결되지만, 이 관계만으로 실제 웨이퍼에서 ρ나 t의 균일성이 입증되지는 않습니다.</p><p>조성 목표는 원자분율, 화학 상태, 불순물 농도 또는 깊이에 따른 프로파일을 가리킬 수 있습니다. 균일도 역시 웨이퍼 내 범위, 표준편차, 가장자리 제외 영역 또는 로트 간 변동 중 무엇인지 정의해야 합니다. 각 지표는 서로 다른 질문에 답합니다. 단순히 &#x27;균일하다&#x27;고 쓰기보다 맵, 샘플링 계획 및 통계량을 제시하십시오.</p></section><section><h2>계면과 적층 구조 전체</h2><p>처음 몇 개의 원자층이 핵생성, 접착, 접촉 저항 및 결함 형성을 좌우할 수 있습니다. 계면은 급격할 수도, 화학적으로 혼합되거나 재구성될 수도 있고, 반응층을 동반할 수도 있습니다. &#x27;막 두께&#x27;라는 표기만으로는 이러한 차이를 설명할 수 없습니다. 응력과 결함의 진화 또한 기판의 구속과 막 두께에 좌우됩니다 <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a>.</p><p>의도한 구조의 일부라면 기판 상태, 하부층, 표면 처리 이력, 캡층 및 후속 열처리를 명시하십시오. 명목상 막과 증착 레시피가 같더라도 표면 종단이 다른 기판에서는 계면이 달라질 수 있습니다. 예를 들어 에피택셜 부정합은 탄성 변형으로 수용되다가 결함을 형성할 수 있으며, 그 균형은 재료계에 따라 다릅니다 <a class="citation" href="../references.html#ref-r07" aria-label="Defects in epitaxial multilayers: I. Misfit dislocations">[r07]</a>.</p></section><section><h2>시료가 아니라 주장을 측정하기</h2><p>하나의 분석법으로 모든 물성을 관찰할 수는 없습니다. X선 반사율은 모델을 통해 두께와 밀도를 제한할 수 있고, 타원계측은 선택한 광학 모델에서 광학 상수와 두께를 추론합니다. 프로파일로미터는 단차를 측정하고, 면저항 맵은 전기적 연속성과 전도도를 조사합니다. 각 결과는 교정, 모델 가정, 공간 샘플링 및 표면 상태에 좌우됩니다. NIST의 박막 계측 연구는 신뢰할 수 있는 비교를 위해 추적 가능한 측정과 표준물질이 중요함을 강조합니다 <a class="citation" href="../references.html#ref-r09" aria-label="Thin-Film X-Ray Metrology for Microelectronics">[r09]</a> <a class="citation" href="../references.html#ref-r10" aria-label="Thin Film RGTMs">[r10]</a>.</p><p>유용한 규격은 목표, 측정법 및 합격 기준을 짝지어 제시합니다. 예를 들어 불확도가 명시된 지정 맵 위치의 두께 범위와 조성 또는 계면 품질 기준을 따로 둘 수 있습니다. 정밀한 측정이라도 잘못된 질문에 답할 수 있습니다. 모델의 모호성이나 재료 불균일성이 해석을 바꿀 수 있다면 독립적인 분석법을 교차 확인에 사용하십시오.</p></section>
+  <section class="worked-example"><h2>계산 예제</h2><p>설명용 계산이며 실제 공정 목표나 측정 결과가 아닙니다. 가상의 균일한 막의 비저항이 20 μΩ·cm이고 두께가 10 nm라고 가정합니다. 단위를 바꾸면 20 μΩ·cm = 2.0×10⁻⁷ Ω·m, 10 nm = 1.0×10⁻⁸ m입니다. 균일하고 등방성인 막이라는 근사에서 R_s = ρ/t = 20 Ω/□입니다. 거칠기, 크기 효과, 계면 및 불균일성은 이 근사를 무효화할 수 있습니다.</p></section>
+
+  <section class="limitations"><h2>한계</h2><ul><li>이 장은 규격 설정의 틀을 제시하며 재료별 합격 한계나 공정 윈도우를 제공하지 않습니다.</li><li>측정법마다 모델에 따라 서로 다른 측정 대상량을 추론하므로 교정과 불확도 분석이 필요합니다.</li></ul></section>
+  <section><h2>복습 질문</h2><ol><li>거칠거나 조성 구배가 있는 막에서 두께 값이 모호해질 수 있는 이유는 무엇이며, 어떤 정보를 함께 제시해야 합니까?</li><li>박막의 기능과 적층 구조의 다른 제약 사이에서 발생하는 상충 관계의 예를 하나 드십시오.</li><li>정밀한 측정이 박막의 설계 목표 달성을 반드시 입증하지는 않는 이유는 무엇입니까?</li></ol></section>
+  <section class="chapter-references"><h2>이 장의 참고문헌</h2><ul><li><a href="../references.html#ref-r01">J. A. Venables, G. D. T. Spiller, and M. Hanbücken (1984). Nucleation and growth of thin films.</a></li><li><a href="../references.html#ref-r06">L. B. Freund and S. Suresh (2003). Thin Film Materials: Stress, Defect Formation and Surface Evolution.</a></li><li><a href="../references.html#ref-r07">J. W. Matthews and A. E. Blakeslee (1974). Defects in epitaxial multilayers: I. Misfit dislocations.</a></li><li><a href="../references.html#ref-r09">National Institute of Standards and Technology (2010). Thin-Film X-Ray Metrology for Microelectronics.</a></li><li><a href="../references.html#ref-r10">National Institute of Standards and Technology (2026). Thin Film RGTMs.</a></li></ul></section>
+  <nav class="chapter-steps" aria-label="장 목록"><a class="chapter-step next" rel="next" href="02-growth-thermodynamics.html">다음 장: 박막 성장의 열역학적 구동력 →</a></nav>
+</article><footer class="site-footer"><span>독립적으로 작성한 교육 자료 · 설명용 모델만 포함</span><a href="../license.html">라이선스·출처</a></footer></main>
+  </div>
+</body>
+</html>

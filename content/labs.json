@@ -1,0 +1,52 @@
+{
+  "experiments": [
+    {
+      "id": "ald-conformality",
+      "chapterId": "c07-ald",
+      "kind": {
+        "en": "Idealized 1-D transport and saturation model",
+        "ko": "이상화된 1차원 수송·포화 모델"
+      },
+      "title": {
+        "en": "ALD conformality explorer",
+        "ko": "ALD 피복성 탐색기"
+      },
+      "description": {
+        "en": "Vary dimensionless transport limitation and exposure to inspect an idealized steady feature concentration and first-order surface coverage profile.",
+        "ko": "무차원 수송 제한과 노출량을 바꾸어 이상화된 정상상태 구조 내 농도 및 1차 표면 피복률 프로파일을 살펴봅니다."
+      }
+    },
+    {
+      "id": "cvd-resistances",
+      "chapterId": "c06-cvd",
+      "kind": {
+        "en": "Series mass-transfer and reaction resistance",
+        "ko": "직렬 물질전달·반응 저항"
+      },
+      "title": {
+        "en": "CVD rate-limitation explorer",
+        "ko": "CVD 속도 제한 요인 탐색기"
+      },
+      "description": {
+        "en": "Compare gas-film transfer and first-order surface-reaction resistance in a steady, reduced-order CVD flux model.",
+        "ko": "정상상태 저차원 CVD 플럭스 모델에서 기체막 전달과 1차 표면 반응 저항을 비교합니다."
+      }
+    },
+    {
+      "id": "stoney-stress",
+      "chapterId": "c10",
+      "kind": {
+        "en": "Isotropic Stoney-equation estimate",
+        "ko": "등방성 Stoney 방정식 추정"
+      },
+      "title": {
+        "en": "Curvature-to-stress estimator",
+        "ko": "곡률-응력 추정기"
+      },
+      "description": {
+        "en": "Estimate signed average film stress from a small curvature change using explicitly stated isotropic and thin-film assumptions.",
+        "ko": "명시된 등방성·박막 가정 아래 작은 곡률 변화로부터 부호를 포함한 평균 막 응력을 추정합니다."
+      }
+    }
+  ]
+}

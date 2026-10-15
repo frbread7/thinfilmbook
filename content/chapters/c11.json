@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "c11",
+  "slug": "metrology",
+  "number": 11,
+  "group": "g6",
+  "title": {
+    "en": "Thin-Film Metrology and Measurement Models",
+    "ko": "박막 계측과 측정 모델"
+  },
+  "summary": {
+    "en": "Surveys how thickness, density, roughness, composition, phase, stress, and electrical properties are measured, emphasizing model dependence, uncertainty, and traceability.",
+    "ko": "두께, 밀도, 거칠기, 조성, 상, 응력 및 전기적 물성 측정법을 살펴보고 모델 의존성, 불확도 및 소급성을 강조한다."
+  },
+  "objectives": {
+    "en": [
+      "Match common thin-film methods to the quantity and sampling depth they actually measure.",
+      "Explain why fitted results depend on physical models and sample structure.",
+      "Identify method-specific limits of XRR, HRXRD, XPS, ellipsometry, and four-point probes.",
+      "Report uncertainty, calibration, and traceability with measurement results."
+    ],
+    "ko": [
+      "일반적인 박막 측정법을 실제 측정량 및 표본 깊이에 맞춘다.",
+      "적합 결과가 물리 모델과 시료 구조에 의존하는 이유를 설명한다.",
+      "XRR, HRXRD, XPS, 타원편광법 및 4점 탐침의 방법별 한계를 파악한다.",
+      "측정 결과와 함께 불확도, 교정 및 소급성을 보고한다."
+    ]
+  },
+  "sections": {
+    "en": [
+      {
+        "heading": "Define the measurand before choosing an instrument",
+        "paragraphs": [
+          "“Film thickness” can mean a geometric step height, a fitted optical thickness, an X-ray density-layer thickness, or a mass-per-area equivalent divided by assumed density. These quantities coincide only under suitable uniformity and model assumptions. Roughness, porosity, interfacial layers, lateral nonuniformity, and substrate contributions can change the relation between signal and reported thickness. Define the measurand and the region represented before comparing methods. [[r09]]",
+          "Every measurement samples a finite depth, area, and population of structures. A local cross-section may reveal a specific interface while missing wafer-scale variation; an area-averaged optical or X-ray result can conceal local defects. State measurement location, area, sampling plan, and whether the reported value is local, averaged, or inferred. Use standards or reference materials where available, while checking that their composition and geometry are relevant to the sample. [[r10]]"
+        ]
+      },
+      {
+        "heading": "Thickness, density, and roughness by reflectometry and optics",
+        "paragraphs": [
+          "X-ray reflectivity (XRR) records reflected intensity versus angle or momentum transfer. Interference fringes constrain layer thickness, while critical-angle behavior and fringe envelope help constrain electron density and roughness in a chosen stack model. Several combinations of thickness, density, roughness, and interfacial grading may fit limited or noisy data similarly. Report the stack model, fitting range, parameter correlations, and uncertainty; XRR does not directly provide a unique real-space image. [[r09]]",
+          "Ellipsometry measures polarization changes and infers optical constants and thickness through a model of layer sequence and optical response. Results can be correlated: a thickness estimate may change if refractive index, anisotropy, absorption, or surface roughness is fixed incorrectly. Neither ellipsometry nor XRR alone guarantees lateral uniformity or separates every interfacial feature. Validate the model with independent thickness or composition evidence when the distinction affects a decision."
+        ]
+      },
+      {
+        "heading": "Composition and structure by spectroscopy and diffraction",
+        "paragraphs": [
+          "X-ray photoelectron spectroscopy (XPS) estimates near-surface elemental composition and chemical states from photoelectron energies and intensities. Quantification depends on sensitivity factors, background and peak models, attenuation, surface contamination, and sample charging. Conventional XPS is surface sensitive; sputter depth profiling can introduce preferential sputtering, mixing, reduction, or other chemical change. State acquisition and preparation conditions and avoid treating a fitted surface ratio as bulk stoichiometry. [[r09]]",
+          "High-resolution X-ray diffraction (HRXRD) identifies and quantifies ordered crystalline contributions through peak position, shape, and intensity under an appropriate structural model. Amorphous or poorly ordered fractions may contribute little or diffuse intensity, and overlapping phases, texture, strain, finite domain size, and instrument resolution affect interpretation. A diffraction peak position alone does not uniquely determine composition or strain; complementary composition and structural measurements may be needed."
+        ]
+      },
+      {
+        "heading": "Stress and electrical properties; uncertainty practice",
+        "paragraphs": [
+          "Curvature methods infer film stress from substrate bending under a mechanical model; they measure curvature first, and inferred stress inherits thickness, elastic-constant, substrate, and sign-convention assumptions. A four-point probe measures voltage and current geometry to estimate sheet resistance; converting to resistivity requires an appropriate thickness and correction for finite sample size, contacts, anisotropy, and nonuniformity. Sheet resistance does not identify the physical cause of a change, such as carrier density, mobility, phase, or thickness. [[r08]]",
+          "A measurement result should include calibration status, reference standards, instrument settings, data-reduction model, repeatability, sampling location, and uncertainty appropriate to the decision. Separate repeatability from systematic effects and record sample history. Traceability means a documented relation through calibrations to recognized references with stated uncertainty; it does not guarantee that the selected model represents the sample correctly. Thin-film reference guide materials can support comparisons when their certified property and use conditions match the task. [[r10]]"
+        ]
+      }
+    ],
+    "ko": [
+      {
+        "heading": "기기를 고르기 전에 측정량을 정의한다",
+        "paragraphs": [
+          "“막 두께”는 기하학적 단차 높이, 적합된 광학 두께, X선 밀도층 두께 또는 가정 밀도로 나눈 면적당 질량 등 여러 뜻일 수 있다. 이 값들은 균일성과 모델 가정이 적절할 때만 일치한다. 거칠기, 기공률, 계면층, 면내 불균일성 및 기판 기여는 신호와 보고 두께의 관계를 바꿀 수 있다. 방법을 비교하기 전에 측정량과 대표 영역을 정의한다. [[r09]]",
+          "모든 측정은 유한한 깊이, 면적 및 구조 모집단을 표본화한다. 국소 단면은 특정 계면을 드러내지만 웨이퍼 규모 변화를 놓칠 수 있고, 면적 평균 광학 또는 X선 결과는 국소 결함을 숨길 수 있다. 측정 위치, 면적, 표본화 계획 및 보고값이 국소값, 평균값 또는 추론값인지를 밝힌다. 가능한 경우 표준 또는 기준 물질을 사용하되 조성과 형상이 시료에 관련되는지 확인한다. [[r10]]"
+        ]
+      },
+      {
+        "heading": "반사율 및 광학법에 의한 두께, 밀도, 거칠기",
+        "paragraphs": [
+          "X선 반사율(XRR)은 각도 또는 운동량 전달에 따른 반사 강도를 기록한다. 간섭 프린지는 층 두께를 제한하고, 임계각 거동과 프린지 포락선은 선택한 적층 모델에서 전자 밀도와 거칠기를 제한한다. 두께, 밀도, 거칠기 및 계면 구배의 여러 조합이 제한적이거나 잡음이 있는 데이터에 비슷하게 적합될 수 있다. 적층 모델, 적합 범위, 매개변수 상관관계 및 불확도를 보고한다. XRR은 고유한 실공간 이미지를 직접 제공하지 않는다. [[r09]]",
+          "타원편광법은 편광 변화량을 측정해 층 순서와 광학 응답 모델에서 광학 상수와 두께를 추론한다. 매개변수는 상관될 수 있다. 굴절률, 이방성, 흡수 또는 표면 거칠기를 잘못 고정하면 두께 추정이 달라질 수 있다. 타원편광법이나 XRR 하나만으로 면내 균일성을 보장하거나 모든 계면 특징을 구별할 수 없다. 구분이 의사결정에 영향을 주면 독립적인 두께 또는 조성 증거로 모델을 검증한다."
+        ]
+      },
+      {
+        "heading": "분광 및 회절을 이용한 조성과 구조 분석",
+        "paragraphs": [
+          "X선 광전자 분광법(XPS)은 광전자 에너지와 강도에서 표면 근처 원소 조성 및 화학 상태를 추정한다. 정량은 감도 계수, 배경 및 피크 모델, 감쇠, 표면 오염 및 시료 대전에 의존한다. 일반 XPS는 표면 민감하며 스퍼터 깊이 프로파일링은 선택 스퍼터링, 혼합, 환원 또는 다른 화학 변화를 일으킬 수 있다. 측정 및 시료 준비 조건을 밝혀야 하며, 피팅된 표면 비율을 벌크 화학량론으로 취급해서는 안 된다. [[r09]]",
+          "고분해능 X선 회절(HRXRD)은 적절한 구조 모델에서 피크 위치, 형태 및 강도를 이용해 질서 있는 결정 기여를 식별하고 정량화한다. 비정질 또는 질서도가 낮은 분율은 기여가 적거나 확산 산란에 나타날 수 있으며, 상 중첩, 배향, 변형, 유한 결정립 크기 및 기기 분해능이 해석에 영향을 준다. 회절 피크 위치만으로 조성이나 변형률을 고유하게 결정할 수 없으므로 보완적인 조성 및 구조 측정이 필요할 수 있다."
+        ]
+      },
+      {
+        "heading": "응력과 전기적 물성, 불확도 실무",
+        "paragraphs": [
+          "곡률법은 역학 모델에서 기판 굽힘으로부터 박막 응력을 추론한다. 먼저 곡률을 측정하며 추론 응력은 두께, 탄성 상수, 기판 및 부호 규약의 가정을 이어받는다. 4점 탐침은 전압·전류 기하를 측정해 면저항을 추정하고, 비저항으로 변환하려면 적절한 두께와 시료 크기, 접촉, 이방성 및 불균일성 보정이 필요하다. 면저항만으로 운반자 밀도, 이동도, 상 또는 두께와 같은 변화 원인을 확인할 수 없다. [[r08]]",
+          "측정 결과에는 교정 상태, 기준 표준, 기기 설정, 데이터 축약 모델, 반복성, 표본 위치 및 의사결정에 적절한 불확도를 포함해야 한다. 반복성과 계통 효과를 분리하고 시료 이력을 기록한다. 소급성은 명시된 불확도를 갖는 교정을 통해 인정된 기준으로 이어지는 문서화된 관계를 뜻하며, 선택한 모델이 시료를 올바르게 표현함을 보장하지 않는다. 박막 기준 안내 물질은 인증된 물성과 사용 조건이 목적에 맞을 때 비교를 지원한다. [[r10]]"
+        ]
+      }
+    ]
+  },
+  "workedExample": {
+    "en": "Illustrative four-point-probe conversion: if a hypothetical uniform film has measured sheet resistance R_s=20 Ω/□ and an independently determined thickness t=100 nm, the simple isotropic estimate is ρ=R_s t=(20 Ω)(100×10⁻⁹ m)=2×10⁻⁶ Ω·m. This calculation assumes uniform thickness and conductivity and appropriate probe corrections. It does not establish whether a real specimen meets those assumptions or explain the physical origin of its resistance.",
+    "ko": "설명용 4점 탐침 변환: 가상의 균일 막에서 측정한 면저항이 R_s=20 Ω/□이고 독립적으로 구한 두께가 t=100 nm라면 단순 등방성 추정은 ρ=R_s t=(20 Ω)(100×10⁻⁹ m)=2×10⁻⁶ Ω·m이다. 이 계산은 두께와 전도도가 균일하고 탐침 보정이 적절하다고 가정한다. 실제 시료가 그 가정을 만족하는지 또는 저항의 물리적 원인이 무엇인지를 이 계산으로 알 수는 없다."
+  },
+  "limitations": {
+    "en": [
+      "Instrument outputs are not interchangeable measurands; fitted values depend on the selected physical model.",
+      "Method-specific depth, area, and preparation effects can bias apparent composition or structure.",
+      "Traceable calibration does not eliminate model error or guarantee sample representativeness."
+    ],
+    "ko": [
+      "기기 출력은 서로 바꿔 쓸 수 있는 측정량이 아니며 적합값은 선택한 물리 모델에 의존한다.",
+      "방법별 깊이, 면적 및 준비 효과가 겉보기 조성 또는 구조를 편향시킬 수 있다.",
+      "소급성 있는 교정도 모델 오류를 없애거나 시료 대표성을 보장하지 않는다."
+    ]
+  },
+  "questions": {
+    "en": [
+      "Why can two methods report different thickness values for the same film without direct contradiction?",
+      "For each of XPS, HRXRD, and ellipsometry, give one key model or sampling limitation.",
+      "What does metrological traceability establish, and what does it not establish about a fitted thin-film result?"
+    ],
+    "ko": [
+      "같은 막에 대해 두 방법이 직접 모순되지 않으면서도 다른 두께를 보고할 수 있는 이유는 무엇인가?",
+      "XPS, HRXRD 및 타원편광법 각각의 핵심 모델 또는 표본화 한계를 하나씩 제시하라.",
+      "계측 소급성은 무엇을 확립하며, 적합된 박막 결과에 대해 무엇을 확립하지는 않는가?"
+    ]
+  },
+  "references": [
+    "r08",
+    "r09",
+    "r10"
+  ]
+}

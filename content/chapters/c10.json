@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "c10",
+  "slug": "stress-adhesion",
+  "number": 10,
+  "group": "g5",
+  "title": {
+    "en": "Film Stress, Adhesion, and Delamination",
+    "ko": "박막 응력, 접착 및 박리"
+  },
+  "summary": {
+    "en": "Separates intrinsic and thermal stress, explains mismatch-driven loading and fracture pathways, and derives the Stoney stress relation with its assumptions and sign-convention limits.",
+    "ko": "고유 응력과 열 응력을 구분하고 부정합에 의한 하중과 파괴 경로를 설명하며, 가정과 부호 규약의 한계를 포함해 Stoney 응력 관계를 제시한다."
+  },
+  "objectives": {
+    "en": [
+      "Separate intrinsic and thermal contributions conceptually and experimentally.",
+      "Relate thermal expansion mismatch to biaxial film stress under constrained strain.",
+      "Recognize adhesion, cohesive fracture, and delamination as distinct failure paths.",
+      "Apply the Stoney relation only when its thin-film and substrate assumptions are reasonable."
+    ],
+    "ko": [
+      "고유 응력과 열 응력의 기여를 개념적·실험적으로 구분한다.",
+      "구속 변형 조건에서 열팽창 부정합을 박막의 이축 응력과 연결한다.",
+      "접착 파괴, 응집 파괴 및 박리를 서로 다른 파괴 경로로 구분한다.",
+      "박막과 기판의 박막 한계 가정이 타당할 때만 Stoney 관계를 적용한다."
+    ]
+  },
+  "sections": {
+    "en": [
+      {
+        "heading": "Where film stress comes from",
+        "paragraphs": [
+          "Intrinsic stress develops during growth through mechanisms such as island coalescence, defect incorporation, grain-boundary evolution, and atomic peening. Its sign and magnitude depend on material, microstructure, and process history; a single mechanism rarely explains every thickness regime. Thermal stress arises when film and substrate would freely expand or contract by different amounts during a temperature change but remain bonded. Measurements after deposition generally include a history-dependent combination of these contributions, plus possible curvature or instrument artifacts. [[r06]]",
+          "For an isotropic film constrained in-plane by a much stiffer substrate, a simple elastic estimate is σ_th≈M_f(α_s−α_f)ΔT, where M_f=E_f/(1−ν_f) is the film biaxial modulus and α_s, α_f are the substrate and film expansion coefficients. This relation assumes uniform temperature, linear elastic response, a suitable reference state, and no relaxation, plasticity, cracking, or interfacial slip. It predicts a component, not the complete measured stress."
+        ]
+      },
+      {
+        "heading": "From stress to fracture and delamination",
+        "paragraphs": [
+          "A film can fail within its own material, at an interface, or through a coupled crack path. Adhesion describes resistance to separation at an interface, while cohesive strength describes resistance to fracture within a material. Residual stress stores elastic energy; when a crack or debonding path can release enough energy, a film may buckle or delaminate. The outcome depends on stress, elastic properties, thickness, flaw geometry, interface toughness, and boundary conditions, not on stress alone. [[r06]]",
+          "An apparent adhesion value is meaningful only with a defined test geometry and failure mode. Scratch, blister, pull-off, and four-point bend methods load the interface differently and can instead fail in an adjacent layer or fixture. Report the specimen stack, preparation, loading protocol, observed fracture surface, and uncertainty. A process change that improves one interface metric may introduce stress, roughness, or chemical changes elsewhere in the stack."
+        ]
+      },
+      {
+        "heading": "Curvature and the Stoney relation",
+        "paragraphs": [
+          "For a film much thinner than a thick, isotropic substrate, the classic Stoney relation estimates average equibiaxial film stress from a curvature change: σ_f≈(M_s t_s²/(6t_f))Δκ, with substrate biaxial modulus M_s=E_s/(1−ν_s), substrate thickness t_s, film thickness t_f, and curvature change Δκ relative to a defined reference. The derivation treats the film as a uniform thin layer, assumes small curvature change and linear elastic substrate behavior, and neglects details such as substrate anisotropy, multilayer coupling, and strong stress gradients. [[r08]]",
+          "The formula gives a signed stress only after the curvature convention, sample orientation, and before/after definition are fixed. Different instruments and software may define positive curvature oppositely, so a reported sign without convention is ambiguous. For nonuniform films, thick coatings, anisotropic substrates, large deflection, or multilayers, use a model appropriate to the geometry and report that model rather than presenting the Stoney estimate as exact."
+        ]
+      },
+      {
+        "heading": "Interpretation and reporting",
+        "paragraphs": [
+          "Curvature during deposition can track stress evolution, while ex situ measurements provide a net state after cool-down and handling. A thermal cycle can reveal reversible mismatch response separately from irreversible relaxation only when temperature, reference curvature, and instrumental drift are controlled. Comparing thickness series and deposition stages can help identify transitions, but correlation with a growth mechanism is not proof of that mechanism. [[r06]]",
+          "A defensible report states the measured quantity, sign convention, calibration, layer and substrate properties used, reference temperature or curvature, and uncertainty. Distinguish measured curvature from inferred stress and identify all assumptions in the conversion. When interface integrity matters, pair stress measurements with a failure-mode observation or a relevant adhesion test; do not treat low average stress as evidence of strong adhesion."
+        ]
+      }
+    ],
+    "ko": [
+      {
+        "heading": "박막 응력의 발생 원인",
+        "paragraphs": [
+          "고유 응력은 섬의 병합, 결함 편입, 입계 진화 및 원자 피닝과 같은 성장 중 메커니즘으로 발생한다. 부호와 크기는 재료, 미세구조 및 공정 이력에 좌우되며, 하나의 메커니즘만으로 모든 두께 구간을 설명하기 어렵다. 열 응력은 막과 기판이 온도 변화 중 자유롭게 팽창 또는 수축했을 때의 양이 서로 다르지만 접합 상태가 유지될 때 발생한다. 증착 후 측정값에는 일반적으로 이러한 기여의 이력 의존적 조합과 곡률 또는 기기 인공물이 포함된다. [[r06]]",
+          "기판보다 훨씬 얇고 기판에 의해 면내 구속된 등방성 막의 단순 탄성 추정은 σ_th≈M_f(α_s−α_f)ΔT이며, M_f=E_f/(1−ν_f)는 막의 이축 탄성률이고 α_s, α_f는 기판과 막의 열팽창 계수다. 이 관계는 균일 온도, 선형 탄성 응답, 적절한 기준 상태, 그리고 완화·소성 변형·균열·계면 미끄럼이 없음을 가정한다. 이는 응력 성분을 예측할 뿐 측정 응력 전체를 주지는 않는다."
+        ]
+      },
+      {
+        "heading": "응력에서 파괴와 박리까지",
+        "paragraphs": [
+          "막은 자체 재료 내부, 계면 또는 두 경로가 결합된 균열 경로를 따라 파괴될 수 있다. 접착은 계면 분리에 대한 저항을 말하며, 응집 강도는 재료 내부 파괴에 대한 저항을 말한다. 잔류 응력은 탄성 에너지를 저장하고, 균열 또는 박리 경로가 충분한 에너지를 방출할 수 있으면 막이 좌굴하거나 박리될 수 있다. 결과는 응력만이 아니라 응력, 탄성 물성, 두께, 결함 형상, 계면 인성 및 경계 조건에 달려 있다. [[r06]]",
+          "관측된 접착 값은 시험 형상과 파괴 모드가 정의되어야 의미가 있다. 스크래치, 블리스터, 인장 및 4점 굽힘 시험은 계면에 서로 다르게 하중을 가하며 실제로는 인접층이나 고정구에서 먼저 파괴될 수도 있다. 시편 적층, 준비, 하중 프로토콜, 관찰한 파괴면 및 불확도를 보고한다. 한 계면 지표를 개선하는 공정 변경이 적층의 다른 부분에 응력, 거칠기 또는 화학 변화를 유발할 수 있다."
+        ]
+      },
+      {
+        "heading": "곡률 측정과 Stoney 관계",
+        "paragraphs": [
+          "막 두께가 두껍고 등방성인 기판보다 훨씬 작은 경우, 고전 Stoney 관계는 기준 상태 대비 곡률 변화에서 평균 등방 이축 막 응력을 추정한다: σ_f≈(M_s t_s²/(6t_f))Δκ. 여기서 M_s=E_s/(1−ν_s)는 기판 이축 탄성률, t_s는 기판 두께, t_f는 막 두께, Δκ는 정의된 기준에 대한 곡률 변화다. 유도는 균일하고 얇은 막, 작은 곡률 변화, 선형 탄성 기판을 가정하고 기판 이방성, 다층 결합 및 큰 응력 구배 같은 세부 사항을 무시한다. [[r08]]",
+          "이 식에서 부호가 있는 응력을 얻으려면 곡률 규약, 시편 방향 및 측정 전후 정의를 고정해야 한다. 기기와 소프트웨어마다 양의 곡률 정의가 반대일 수 있으므로 규약 없는 부호 보고는 모호하다. 불균일 막, 두꺼운 코팅, 이방성 기판, 큰 변형 또는 다층 적층에는 형상에 맞는 모델을 사용하고, Stoney 추정치를 정확한 값처럼 제시하지 말아야 한다."
+        ]
+      },
+      {
+        "heading": "해석과 보고",
+        "paragraphs": [
+          "증착 중 곡률은 응력의 변화를 추적할 수 있지만, 시편 외부 측정은 냉각과 취급 후의 순 상태를 제공한다. 열 이력, 기준 곡률 및 기기 드리프트를 통제해야 온도 변화에서 가역적인 부정합 응답과 비가역 완화를 구분할 수 있다. 두께별 또는 증착 단계별 비교는 전이를 찾는 데 도움이 되지만 성장 메커니즘과의 상관관계가 그 메커니즘의 증명은 아니다. [[r06]]",
+          "재현성 있는 보고에는 측정량, 부호 규약, 교정, 변환에 사용한 층 및 기판 물성, 기준 온도 또는 곡률, 불확도가 포함된다. 측정한 곡률과 추론한 응력을 구분하고 변환의 모든 가정을 밝혀야 한다. 계면 건전성이 중요하면 응력 측정과 파괴 모드 관찰 또는 관련 접착 시험을 결합한다. 평균 응력이 낮다고 접착이 강하다고 단정하지 않는다."
+        ]
+      }
+    ]
+  },
+  "workedExample": {
+    "en": "Illustrative values only: take E_s=130 GPa, ν_s=0.28, t_s=500 μm, t_f=1 μm, and measured Δκ=0.01 m⁻¹. Then M_s=130/(1−0.28)≈181 GPa and σ_f≈[181×10⁹ Pa×(500×10⁻⁶ m)²/(6×1×10⁻⁶ m)]×0.01 m⁻¹≈7.5×10⁷ Pa, or about 75 MPa in magnitude. The sign depends on the stated curvature convention. These illustrative inputs do not describe a validated material or process; the estimate assumes a thin uniform film and thick isotropic elastic substrate.",
+    "ko": "설명용 값만 사용한다: E_s=130 GPa, ν_s=0.28, t_s=500 μm, t_f=1 μm, 측정 곡률 변화 Δκ=0.01 m⁻¹라 하자. 그러면 M_s=130/(1−0.28)≈181 GPa이고 σ_f≈[181×10⁹ Pa×(500×10⁻⁶ m)²/(6×1×10⁻⁶ m)]×0.01 m⁻¹≈7.5×10⁷ Pa, 즉 크기로 약 75 MPa다. 부호는 명시된 곡률 규약에 달려 있다. 이 설명용 입력은 검증된 재료나 공정을 나타내지 않으며, 균일 박막과 두껍고 등방성인 탄성 기판을 가정한다."
+  },
+  "limitations": {
+    "en": [
+      "Intrinsic and thermal stress are coupled in post-deposition measurements unless the thermal and growth histories are separated.",
+      "The Stoney relation is an approximation with restrictive geometry, elasticity, and uniformity assumptions.",
+      "Stress alone does not determine adhesion or predict delamination without fracture and flaw information."
+    ],
+    "ko": [
+      "증착 후 측정에서는 열 이력과 성장 이력을 분리하지 않으면 고유 응력과 열 응력이 함께 나타난다.",
+      "Stoney 관계는 형상, 탄성 및 균일성 가정이 제한적인 근사식이다.",
+      "파괴 및 결함 정보 없이 응력만으로 접착을 결정하거나 박리를 예측할 수 없다."
+    ]
+  },
+  "questions": {
+    "en": [
+      "Name two growth mechanisms that can contribute to intrinsic stress and one reason measured stress may also include thermal contribution.",
+      "What assumptions and sign-convention details must accompany a Stoney-based stress value?",
+      "How do interfacial adhesion failure and cohesive fracture differ, and why can low average stress fail to guarantee adhesion?"
+    ],
+    "ko": [
+      "고유 응력에 기여할 수 있는 성장 메커니즘 두 가지와 측정 응력에 열 기여도 포함될 수 있는 이유 한 가지를 들어라.",
+      "Stoney 관계에 기반한 응력값에 어떤 가정과 부호 규약 세부사항을 함께 제시해야 하는가?",
+      "계면 접착 파괴와 응집 파괴는 어떻게 다르며, 평균 응력이 낮아도 접착을 보장할 수 없는 이유는 무엇인가?"
+    ]
+  },
+  "references": [
+    "r06",
+    "r08"
+  ]
+}

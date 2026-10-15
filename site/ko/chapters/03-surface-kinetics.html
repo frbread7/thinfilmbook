@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="증착 중 표면 동역학 — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>증착 중 표면 동역학 · ThinFilmBook</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script type="module" src="../../assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">ThinFilmBook</a>
+    <span class="subtitle">박막 과학 · 공학 모델</span>
+    <nav aria-label="주요 탐색">
+      <a href="../index.html">개요</a>
+      <a href="../lab.html">분석 실험실</a>
+      <a href="../references.html">참고문헌</a>
+      <a href="../license.html">라이선스·출처</a>
+    </nav>
+    <a class="language-link" lang="en" href="../../chapters/03-surface-kinetics.html">English</a>
+  </header>
+  <div class="page-layout">
+    <aside class="chapter-nav" aria-label="장 목록"><h2>모든 장</h2><a href="01-film-objectives.html"><span>01</span> 박막의 기능과 설계 목표</a><a href="02-growth-thermodynamics.html"><span>02</span> 박막 성장의 열역학적 구동력</a><a aria-current="page" href="03-surface-kinetics.html"><span>03</span> 증착 중 표면 동역학</a><a href="04-nucleation-coalescence.html"><span>04</span> 핵생성에서 연결된 박막까지</a><a href="05-pvd.html"><span>05</span> 물리적 기상 증착: 증발과 스퍼터링</a><a href="06-cvd.html"><span>06</span> 화학 기상 증착: 수송과 반응</a><a href="07-ald.html"><span>07</span> 원자층 증착: 사이클과 등각성</a><a href="08-epitaxy.html"><span>08</span> 에피택시: 격자 정합, 변형률, 결함</a><a href="interfaces.html"><span>09</span> 계면, 상호확산 및 상 발달</a><a href="stress-adhesion.html"><span>10</span> 박막 응력, 접착 및 박리</a><a href="metrology.html"><span>11</span> 박막 계측과 측정 모델</a><a href="integration.html"><span>12</span> 재료 목표에서 공정 통합까지</a></aside>
+    <main id="main"><article class="chapter-content" id="c03-surface-kinetics">
+  <p class="eyebrow">장 03 · 표면 동역학과 핵생성</p>
+  <h1>증착 중 표면 동역학</h1>
+  <p class="lede">입사 플럭스, 부착, 체류, 탈착 및 표면 확산은 도달한 종이 어떻게 편입 물질이 되는지 결정합니다. 이 장에서는 팹 레시피를 제시하지 않고 이러한 과정과 온도, 압력 및 플럭스의 관계를 정성적으로 설명합니다.</p>
+  <section class="objectives"><h2>학습 목표</h2><ul><li>입사 플럭스와 유효 부착 확률을 정의하고 표면 수지에 적용한다.</li><li>체류 시간과 표면 확산이 포획 및 편입에 미치는 영향을 설명한다.</li><li>가정을 밝히면서 온도, 압력 또는 플럭스 변화의 정성적 동역학 효과를 예측한다.</li></ul></section>
+  <section><h2>입사 플럭스와 부착</h2><p>입사 플럭스 F는 단위 면적에 단위 시간 동안 도달하는 종의 수입니다. 기판에서의 플럭스는 수송, 충돌, 기하 구조 및 화학 반응의 영향을 받으므로 소스 방출률과 다를 수 있습니다. 단순한 기체 운동론에서 플럭스는 수밀도와 속도 분포에 의존하며, 압력을 기판 플럭스로 바꾸려면 기체 조성과 수송 영역을 알아야 합니다.</p><p>부착 확률 S는 지정된 조건에서 입사 종 가운데 정해진 관찰 시간 동안 표면에 남거나 편입되는 비율입니다. 피복률, 종의 에너지, 표면 종단 및 반응 파트너에 따라 달라질 수 있습니다. 최초의 순보유량은 F S로 추정할 수 있지만 이것이 반드시 막 성장률은 아닙니다. 보유된 종은 탈착하거나 가장자리로 확산되거나 반응 부산물로 빠져나갈 수 있습니다 <a class="citation" href="../references.html#ref-r01" aria-label="Nucleation and growth of thin films">[r01]</a>.</p></section><section><h2>체류와 탈착</h2><p>체류 시간은 흡착종이 떠나거나 화학 상태가 바뀌기 전까지 표면에 머무르는 시간을 나타냅니다. 활성화된 단일 자리 근사에서 τ ≈ τ₀ exp(E_des/k_BT)로 쓸 수 있습니다. 탈착이 활성화되어 있다면 온도 상승으로 체류 시간이 크게 줄 수 있지만, 같은 온도 변화가 반응이나 확산을 촉진할 수도 있습니다. 빈도 인자와 장벽은 재료와 상태에 따라 달라지므로, 이 식은 추세를 생각하는 데 사용하고 측정하지 않은 값을 정하는 데 쓰지 않아야 합니다.</p><p>표면에 결합 자리 분포나 피복률 의존 화학이 있으면 흡착종의 체류 시간은 하나로 정해지지 않습니다. 재흡착은 겉보기 체류 시간을 늘릴 수도 있습니다. 자기 제한 반응 순서에서는 표면 종단과 반응물 노출에 따라 자리가 소모, 재생 또는 차단될 수 있습니다. 그러므로 ALD 화학을 일반적인 부착 계수 하나로 환원할 수 없습니다 <a class="citation" href="../references.html#ref-r02" aria-label="Atomic Layer Deposition: An Overview">[r02]</a> <a class="citation" href="../references.html#ref-r03" aria-label="Surface chemistry of atomic layer deposition: A case study for the trimethylaluminum/water process">[r03]</a>.</p></section><section><h2>표면 확산과 포획</h2><p>흡착종은 탈착하거나 반응하기 전에 표면 자리 사이를 이동할 수 있습니다. 단순 무작위 보행 그림에서 확산 길이는 ℓ_D ≈ (D_s τ)^1/2 정도이며, D_s는 표면 확산계수이고 τ는 관련 수명입니다. 수치 계수는 차원과 정의에 따라 달라집니다. 확산 길이가 길면 단차, 결함 또는 안정한 핵에 도달할 가능성이 커질 수 있지만 응집이나 공간 재분포도 촉진될 수 있습니다.</p><p>확산계수는 흔히 D_s = D₀ exp(−E_diff/k_BT)로 모델링합니다. 따라서 온도는 이동성을 높이는 동시에 탈착으로 체류 시간을 줄일 수 있습니다. 이 효과들의 경쟁이 중요합니다. 이동성이 높은 종이라도 곧바로 떠나면, 적당히 이동하면서 포획될 때까지 살아남는 종보다 기여가 적을 수 있습니다. 기판의 단차, 결함, 재구성 및 화학적 종단은 이동과 포획 확률 모두를 바꿉니다 <a class="citation" href="../references.html#ref-r01" aria-label="Nucleation and growth of thin films">[r01]</a>.</p></section><section><h2>온도, 압력, 플럭스의 결합 효과</h2><p>온도는 탈착, 확산, 표면 반응 및 때로는 벌크 편입 속도를 동시에 바꿉니다. 압력은 입사율과 기상 충돌 또는 수송 거동에 영향을 줄 수 있지만, 반응기 기하와 화학이 중요하므로 효과가 항상 단조롭지는 않습니다. 플럭스 증가는 피복률과 종 간 만남 빈도를 높이는 동시에 도달과 완화 시간의 비율을 바꿀 수 있습니다. 이 변수들은 서로 독립적인 조절 손잡이가 아닙니다.</p><p>유용한 분석에서는 속도 제한 단계를 밝히고 특성 시간을 비교합니다. 표면 재배열에 비해 입사가 빠르면 비평형 구조가 고정될 수 있고, 탈착이 지배적이면 순축적이 작을 수 있습니다. 특정 계의 장벽, 수송 및 표면 상태를 측정하거나 모델링하기 전까지 이러한 논의는 정성적입니다. 반응기 규모의 수송은 표면 동역학과 구분하여 고려해야 할 수 있습니다 <a class="citation" href="../references.html#ref-r05" aria-label="On the modelling of transport phenomena in chemical vapour deposition and its use in reactor design and process optimization">[r05]</a>.</p></section>
+  <section class="worked-example"><h2>계산 예제</h2><p>시간 규모 비교를 위한 설명용 예입니다. 가상의 흡착종에 대해 D_s = 1 nm²/s, 수명 τ = 4 s라고 가정하면 차수 수준의 확산 길이는 ℓ_D ≈ (D_s τ)^1/2 = (4 nm²)^1/2 = 2 nm입니다. 일정한 확산계수와 수명을 갖는 단순 무작위 보행을 가정한 추정이며, 측정된 재료값이나 공정 예측이 아닙니다.</p></section>
+
+  <section class="limitations"><h2>한계</h2><ul><li>동역학 식은 단순화 모델이며 실제 표면에는 여러 자리, 반응 및 피복률 의존 속도가 있을 수 있습니다.</li><li>온도, 압력, 플럭스 또는 레시피 범위를 권고하지 않으며 실제 계에서 추세를 확인해야 합니다.</li></ul></section>
+  <section><h2>복습 질문</h2><ol><li>입사 플럭스에 부착 확률을 곱한 값이 항상 성장률과 같지 않은 이유는 무엇입니까?</li><li>온도 상승이 편입에 동시에 유리하고 불리할 수 있는 이유는 무엇입니까?</li><li>확산 길이 추정치를 해석하려면 어떤 가정이 필요합니까?</li></ol></section>
+  <section class="chapter-references"><h2>이 장의 참고문헌</h2><ul><li><a href="../references.html#ref-r01">J. A. Venables, G. D. T. Spiller, and M. Hanbücken (1984). Nucleation and growth of thin films.</a></li><li><a href="../references.html#ref-r02">Steven M. George (2010). Atomic Layer Deposition: An Overview.</a></li><li><a href="../references.html#ref-r03">Riikka L. Puurunen (2005). Surface chemistry of atomic layer deposition: A case study for the trimethylaluminum/water process.</a></li><li><a href="../references.html#ref-r05">M. J. G. V. M. Kleijn (1991). On the modelling of transport phenomena in chemical vapour deposition and its use in reactor design and process optimization.</a></li></ul></section>
+  <nav class="chapter-steps" aria-label="장 목록"><a class="chapter-step" rel="prev" href="02-growth-thermodynamics.html">← 이전 장: 박막 성장의 열역학적 구동력</a><a class="chapter-step next" rel="next" href="04-nucleation-coalescence.html">다음 장: 핵생성에서 연결된 박막까지 →</a></nav>
+</article><footer class="site-footer"><span>독립적으로 작성한 교육 자료 · 설명용 모델만 포함</span><a href="../license.html">라이선스·출처</a></footer></main>
+  </div>
+</body>
+</html>

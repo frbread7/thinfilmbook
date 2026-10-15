@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="박막 응력, 접착 및 박리 — ThinFilmBook">
+  <meta name="theme-color" content="#172d38">
+  <title>박막 응력, 접착 및 박리 · ThinFilmBook</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script type="module" src="../../assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">ThinFilmBook</a>
+    <span class="subtitle">박막 과학 · 공학 모델</span>
+    <nav aria-label="주요 탐색">
+      <a href="../index.html">개요</a>
+      <a href="../lab.html">분석 실험실</a>
+      <a href="../references.html">참고문헌</a>
+      <a href="../license.html">라이선스·출처</a>
+    </nav>
+    <a class="language-link" lang="en" href="../../chapters/stress-adhesion.html">English</a>
+  </header>
+  <div class="page-layout">
+    <aside class="chapter-nav" aria-label="장 목록"><h2>모든 장</h2><a href="01-film-objectives.html"><span>01</span> 박막의 기능과 설계 목표</a><a href="02-growth-thermodynamics.html"><span>02</span> 박막 성장의 열역학적 구동력</a><a href="03-surface-kinetics.html"><span>03</span> 증착 중 표면 동역학</a><a href="04-nucleation-coalescence.html"><span>04</span> 핵생성에서 연결된 박막까지</a><a href="05-pvd.html"><span>05</span> 물리적 기상 증착: 증발과 스퍼터링</a><a href="06-cvd.html"><span>06</span> 화학 기상 증착: 수송과 반응</a><a href="07-ald.html"><span>07</span> 원자층 증착: 사이클과 등각성</a><a href="08-epitaxy.html"><span>08</span> 에피택시: 격자 정합, 변형률, 결함</a><a href="interfaces.html"><span>09</span> 계면, 상호확산 및 상 발달</a><a aria-current="page" href="stress-adhesion.html"><span>10</span> 박막 응력, 접착 및 박리</a><a href="metrology.html"><span>11</span> 박막 계측과 측정 모델</a><a href="integration.html"><span>12</span> 재료 목표에서 공정 통합까지</a></aside>
+    <main id="main"><article class="chapter-content" id="c10">
+  <p class="eyebrow">장 10 · 계면, 확산 및 응력</p>
+  <h1>박막 응력, 접착 및 박리</h1>
+  <p class="lede">고유 응력과 열 응력을 구분하고 부정합에 의한 하중과 파괴 경로를 설명하며, 가정과 부호 규약의 한계를 포함해 Stoney 응력 관계를 제시한다.</p>
+  <section class="objectives"><h2>학습 목표</h2><ul><li>고유 응력과 열 응력의 기여를 개념적·실험적으로 구분한다.</li><li>구속 변형 조건에서 열팽창 부정합을 박막의 이축 응력과 연결한다.</li><li>접착 파괴, 응집 파괴 및 박리를 서로 다른 파괴 경로로 구분한다.</li><li>박막과 기판의 박막 한계 가정이 타당할 때만 Stoney 관계를 적용한다.</li></ul></section>
+  <section><h2>박막 응력의 발생 원인</h2><p>고유 응력은 섬의 병합, 결함 편입, 입계 진화 및 원자 피닝과 같은 성장 중 메커니즘으로 발생한다. 부호와 크기는 재료, 미세구조 및 공정 이력에 좌우되며, 하나의 메커니즘만으로 모든 두께 구간을 설명하기 어렵다. 열 응력은 막과 기판이 온도 변화 중 자유롭게 팽창 또는 수축했을 때의 양이 서로 다르지만 접합 상태가 유지될 때 발생한다. 증착 후 측정값에는 일반적으로 이러한 기여의 이력 의존적 조합과 곡률 또는 기기 인공물이 포함된다. <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a></p><p>기판보다 훨씬 얇고 기판에 의해 면내 구속된 등방성 막의 단순 탄성 추정은 σ_th≈M_f(α_s−α_f)ΔT이며, M_f=E_f/(1−ν_f)는 막의 이축 탄성률이고 α_s, α_f는 기판과 막의 열팽창 계수다. 이 관계는 균일 온도, 선형 탄성 응답, 적절한 기준 상태, 그리고 완화·소성 변형·균열·계면 미끄럼이 없음을 가정한다. 이는 응력 성분을 예측할 뿐 측정 응력 전체를 주지는 않는다.</p></section><section><h2>응력에서 파괴와 박리까지</h2><p>막은 자체 재료 내부, 계면 또는 두 경로가 결합된 균열 경로를 따라 파괴될 수 있다. 접착은 계면 분리에 대한 저항을 말하며, 응집 강도는 재료 내부 파괴에 대한 저항을 말한다. 잔류 응력은 탄성 에너지를 저장하고, 균열 또는 박리 경로가 충분한 에너지를 방출할 수 있으면 막이 좌굴하거나 박리될 수 있다. 결과는 응력만이 아니라 응력, 탄성 물성, 두께, 결함 형상, 계면 인성 및 경계 조건에 달려 있다. <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a></p><p>관측된 접착 값은 시험 형상과 파괴 모드가 정의되어야 의미가 있다. 스크래치, 블리스터, 인장 및 4점 굽힘 시험은 계면에 서로 다르게 하중을 가하며 실제로는 인접층이나 고정구에서 먼저 파괴될 수도 있다. 시편 적층, 준비, 하중 프로토콜, 관찰한 파괴면 및 불확도를 보고한다. 한 계면 지표를 개선하는 공정 변경이 적층의 다른 부분에 응력, 거칠기 또는 화학 변화를 유발할 수 있다.</p></section><section><h2>곡률 측정과 Stoney 관계</h2><p>막 두께가 두껍고 등방성인 기판보다 훨씬 작은 경우, 고전 Stoney 관계는 기준 상태 대비 곡률 변화에서 평균 등방 이축 막 응력을 추정한다: σ_f≈(M_s t_s²/(6t_f))Δκ. 여기서 M_s=E_s/(1−ν_s)는 기판 이축 탄성률, t_s는 기판 두께, t_f는 막 두께, Δκ는 정의된 기준에 대한 곡률 변화다. 유도는 균일하고 얇은 막, 작은 곡률 변화, 선형 탄성 기판을 가정하고 기판 이방성, 다층 결합 및 큰 응력 구배 같은 세부 사항을 무시한다. <a class="citation" href="../references.html#ref-r08" aria-label="Celebrating the 100th anniversary of the Stoney equation for film stress: Developments from its implementation in microelectronics to nowadays applications in MEMS research">[r08]</a></p><p>이 식에서 부호가 있는 응력을 얻으려면 곡률 규약, 시편 방향 및 측정 전후 정의를 고정해야 한다. 기기와 소프트웨어마다 양의 곡률 정의가 반대일 수 있으므로 규약 없는 부호 보고는 모호하다. 불균일 막, 두꺼운 코팅, 이방성 기판, 큰 변형 또는 다층 적층에는 형상에 맞는 모델을 사용하고, Stoney 추정치를 정확한 값처럼 제시하지 말아야 한다.</p></section><section><h2>해석과 보고</h2><p>증착 중 곡률은 응력의 변화를 추적할 수 있지만, 시편 외부 측정은 냉각과 취급 후의 순 상태를 제공한다. 열 이력, 기준 곡률 및 기기 드리프트를 통제해야 온도 변화에서 가역적인 부정합 응답과 비가역 완화를 구분할 수 있다. 두께별 또는 증착 단계별 비교는 전이를 찾는 데 도움이 되지만 성장 메커니즘과의 상관관계가 그 메커니즘의 증명은 아니다. <a class="citation" href="../references.html#ref-r06" aria-label="Thin Film Materials: Stress, Defect Formation and Surface Evolution">[r06]</a></p><p>재현성 있는 보고에는 측정량, 부호 규약, 교정, 변환에 사용한 층 및 기판 물성, 기준 온도 또는 곡률, 불확도가 포함된다. 측정한 곡률과 추론한 응력을 구분하고 변환의 모든 가정을 밝혀야 한다. 계면 건전성이 중요하면 응력 측정과 파괴 모드 관찰 또는 관련 접착 시험을 결합한다. 평균 응력이 낮다고 접착이 강하다고 단정하지 않는다.</p></section>
+  <section class="worked-example"><h2>계산 예제</h2><p>설명용 값만 사용한다: E_s=130 GPa, ν_s=0.28, t_s=500 μm, t_f=1 μm, 측정 곡률 변화 Δκ=0.01 m⁻¹라 하자. 그러면 M_s=130/(1−0.28)≈181 GPa이고 σ_f≈[181×10⁹ Pa×(500×10⁻⁶ m)²/(6×1×10⁻⁶ m)]×0.01 m⁻¹≈7.5×10⁷ Pa, 즉 크기로 약 75 MPa다. 부호는 명시된 곡률 규약에 달려 있다. 이 설명용 입력은 검증된 재료나 공정을 나타내지 않으며, 균일 박막과 두껍고 등방성인 탄성 기판을 가정한다.</p></section>
+  <p class="related-lab"><a href="../lab.html#stoney-stress">실험실 열기: 곡률-응력 추정기 →</a></p>
+  <section class="limitations"><h2>한계</h2><ul><li>증착 후 측정에서는 열 이력과 성장 이력을 분리하지 않으면 고유 응력과 열 응력이 함께 나타난다.</li><li>Stoney 관계는 형상, 탄성 및 균일성 가정이 제한적인 근사식이다.</li><li>파괴 및 결함 정보 없이 응력만으로 접착을 결정하거나 박리를 예측할 수 없다.</li></ul></section>
+  <section><h2>복습 질문</h2><ol><li>고유 응력에 기여할 수 있는 성장 메커니즘 두 가지와 측정 응력에 열 기여도 포함될 수 있는 이유 한 가지를 들어라.</li><li>Stoney 관계에 기반한 응력값에 어떤 가정과 부호 규약 세부사항을 함께 제시해야 하는가?</li><li>계면 접착 파괴와 응집 파괴는 어떻게 다르며, 평균 응력이 낮아도 접착을 보장할 수 없는 이유는 무엇인가?</li></ol></section>
+  <section class="chapter-references"><h2>이 장의 참고문헌</h2><ul><li><a href="../references.html#ref-r06">L. B. Freund and S. Suresh (2003). Thin Film Materials: Stress, Defect Formation and Surface Evolution.</a></li><li><a href="../references.html#ref-r08">B. J. Janssen, M. M. Abdalla, F. van Keulen, B. R. Pujada, and G. Q. Zhang (2009). Celebrating the 100th anniversary of the Stoney equation for film stress: Developments from its implementation in microelectronics to nowadays applications in MEMS research.</a></li></ul></section>
+  <nav class="chapter-steps" aria-label="장 목록"><a class="chapter-step" rel="prev" href="interfaces.html">← 이전 장: 계면, 상호확산 및 상 발달</a><a class="chapter-step next" rel="next" href="metrology.html">다음 장: 박막 계측과 측정 모델 →</a></nav>
+</article><footer class="site-footer"><span>독립적으로 작성한 교육 자료 · 설명용 모델만 포함</span><a href="../license.html">라이선스·출처</a></footer></main>
+  </div>
+</body>
+</html>
