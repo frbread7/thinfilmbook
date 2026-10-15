@@ -78,6 +78,24 @@ class ThinFilmBookSiteTests(unittest.TestCase):
                     self.assertTrue(chapter["workedExample"][language].strip())
                 self.assertLessEqual(set(chapter["references"]), refs)
 
+    def test_bilingual_technical_terms_preserve_key_distinctions(self):
+        chapters = {chapter["id"]: chapter for chapter in self.chapters}
+        ko_text = {
+            chapter_id: json.dumps(chapter, ensure_ascii=False)
+            for chapter_id, chapter in chapters.items()
+        }
+        epitaxy = ko_text["c08-epitaxy"].replace("부정합 전위", "")
+        self.assertIn("부정합 전위", ko_text["c08-epitaxy"])
+        self.assertNotIn("정합 전위", epitaxy)
+        self.assertIn("초기 성장 지연", ko_text["c07-ald"])
+        self.assertNotIn("배양", ko_text["c07-ald"])
+        self.assertIn("강성이 훨씬 큰 기판", ko_text["c10"])
+        self.assertNotIn("기판보다 훨씬 얇고", ko_text["c10"])
+        self.assertIn("특정 화학종의 플럭스", ko_text["c12"])
+        self.assertIn("실제 화학종과 상", ko_text["c09"])
+        self.assertIn("측정 깊이", ko_text["c11"])
+        self.assertNotIn("표본 깊이", ko_text["c11"])
+
     def test_all_local_resources_and_fragments_resolve(self):
         pages = sorted(SITE.rglob("*.html"))
         self.assertEqual(len(pages), 32)
@@ -125,6 +143,13 @@ class ThinFilmBookSiteTests(unittest.TestCase):
                 parser = parsed(page)
                 remote_scripts = [url for url in parser.resources if url.startswith(("http://", "https://")) and url.endswith((".js", ".mjs"))]
                 self.assertEqual(remote_scripts, [])
+
+    def test_korean_overview_and_example_labels_are_localized_and_accurate(self):
+        korean_home = (SITE / "ko" / "index.html").read_text(encoding="utf-8")
+        integration = (SITE / "ko" / "chapters" / "integration.html").read_text(encoding="utf-8")
+        self.assertIn("대학원 수준의 공학 · 독창적 기술 교재", korean_home)
+        self.assertNotIn("Graduate-level engineering", korean_home)
+        self.assertIn("<h2>예제</h2>", integration)
 
     def test_generated_pages_have_no_trailing_whitespace(self):
         for page in SITE.rglob("*.html"):

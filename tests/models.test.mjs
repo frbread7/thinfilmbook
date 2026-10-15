@@ -35,6 +35,14 @@ test('Stoney estimate has correct unit scaling and signed response', () => {
   const baseline = calculateStoneyStress({ curvatureChangePerM: 0.1 });
   assert.ok(baseline.stressMPa > 0);
   assert.deepEqual(baseline.assumptionWarnings, []);
+  const chapterReference = calculateStoneyStress({
+    substrateModulusGPa: 130,
+    poissonRatio: 0.28,
+    substrateThicknessUm: 500,
+    filmThicknessNm: 1000,
+    curvatureChangePerM: 0.01
+  });
+  assert.ok(Math.abs(chapterReference.stressMPa - 75) < 0.5);
   assert.equal(calculateStoneyStress({ curvatureChangePerM: -0.1 }).stressMPa, -baseline.stressMPa);
   const doubledFilm = calculateStoneyStress({ filmThicknessNm: 200, curvatureChangePerM: 0.1 });
   assert.ok(Math.abs(doubledFilm.stressMPa * 2 - baseline.stressMPa) < 1e-10);

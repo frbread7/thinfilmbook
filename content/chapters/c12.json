@@ -90,7 +90,7 @@
   },
   "workedExample": {
     "en": "Illustrative target translation: for a hypothetical barrier layer, the device need may be stated as limiting a specified species flux below an application-defined threshold after a defined thermal history. Convert this into measurable outputs: composition and phase, thickness distribution, pinhole or defect evidence, interface reaction depth, and post-exposure flux or electrical response. Specify the test structure, detection limits, uncertainty, and acceptance rule before comparing candidate process families. No numerical threshold or deposition condition is implied here.",
-    "ko": "설명용 목표 변환: 가상의 장벽층에서 소자 요구는 정의된 열 이력 후 특정 원소 플럭스를 응용 분야가 정한 한계 이하로 제한하는 것으로 표현할 수 있다. 이를 측정 출력, 즉 조성과 상, 두께 분포, 핀홀 또는 결함 증거, 계면 반응 깊이, 노출 후 플럭스 또는 전기 응답으로 변환한다. 후보 공정 계열을 비교하기 전에 시험 구조, 검출 한계, 불확도 및 합격 규칙을 지정한다. 여기서는 수치 한계나 증착 조건을 제시하지 않는다."
+    "ko": "설명용 목표 변환: 가상의 장벽층에서 소자 요구는 정의된 열 이력 후 특정 화학종의 플럭스를 응용 분야가 정한 한계 이하로 제한하는 것으로 표현할 수 있다. 이를 측정 출력, 즉 조성과 상, 두께 분포, 핀홀 또는 결함 증거, 계면 반응 깊이, 노출 후 플럭스 또는 전기 응답으로 변환한다. 후보 공정 계열을 비교하기 전에 시험 구조, 검출 한계, 불확도 및 합격 규칙을 지정한다. 여기서는 수치 한계나 증착 조건을 제시하지 않는다."
   },
   "limitations": {
     "en": [

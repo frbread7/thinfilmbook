@@ -5,6 +5,10 @@ const undefinedCoverage = {
   en: 'Coverage ratio is undefined at zero exposure.',
   ko: '노출량이 0이면 피복률 비는 정의되지 않습니다.'
 }[locale];
+const requiredValueMessage = {
+  en: 'Enter a value before running the model.',
+  ko: '모델을 실행하기 전에 값을 입력하세요.'
+}[locale];
 const message = {
   en: {
     error: 'Check the input ranges and try again.',
@@ -41,6 +45,7 @@ function format(value) {
 function readValue(id) {
   const input = document.getElementById(id);
   if (!input) throw new Error(`Missing model input: ${id}`);
+  if (input.value.trim() === '') throw new RangeError(requiredValueMessage);
   const value = Number(input.value);
   if (!Number.isFinite(value)) throw new RangeError(`Invalid number for ${id}`);
   return value;
