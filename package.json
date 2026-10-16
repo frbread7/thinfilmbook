@@ -8,8 +8,9 @@
     "build": "python3 tools/build_site.py --write-manifest",
     "validate": "python3 tools/build_site.py --check && node --check assets/js/models.mjs && node --check assets/js/site.js",
     "test:models": "node --test tests/models.test.mjs",
+    "test:runtime": "node --test tests/site-handlers.test.mjs",
     "test:content": "python3 -m unittest discover -s tests -p 'test_*.py' -v",
-    "test": "npm run build && npm run validate && npm run test:models && npm run test:content",
+    "test": "npm run build && npm run validate && npm run test:models && npm run test:runtime && npm run test:content",
     "serve": "python3 -m http.server 4173 --directory site"
   }
 }

@@ -144,6 +144,31 @@ class ThinFilmBookSiteTests(unittest.TestCase):
                 remote_scripts = [url for url in parser.resources if url.startswith(("http://", "https://")) and url.endswith((".js", ".mjs"))]
                 self.assertEqual(remote_scripts, [])
 
+    def test_license_scope_map_is_published_and_mixed_notices_are_preserved(self):
+        source_map = (ROOT / "LICENSE.md").read_text(encoding="utf-8")
+        self.assertEqual((SITE / "LICENSE.md").read_text(encoding="utf-8"), source_map)
+        self.assertIn("Component map", source_map)
+        self.assertIn("Generated `site/**/*.html`", source_map)
+        self.assertIn("AI-assisted provenance", source_map)
+        self.assertNotIn("ThinFilmBook contributors", source_map)
+        source_docs = {path.relative_to(ROOT / "docs").as_posix(): path for path in (ROOT / "docs").rglob("*") if path.is_file()}
+        generated_docs = {path.relative_to(SITE / "docs").as_posix(): path for path in (SITE / "docs").rglob("*") if path.is_file()}
+        self.assertEqual(source_docs.keys(), generated_docs.keys())
+        for relative, source_path in source_docs.items():
+            with self.subTest(document=relative):
+                self.assertEqual(generated_docs[relative].read_bytes(), source_path.read_bytes())
+        self.assertTrue((SITE / "docs" / "PROVENANCE_AND_REVIEW.md").is_file())
+        for notice in ("LICENSE.md", "LICENSE-AND-ATTRIBUTION.md"):
+            self.assertIn("docs/PROVENANCE_AND_REVIEW.md", (SITE / notice).read_text(encoding="utf-8"))
+        for language, prefix in (("en", ""), ("ko", "ko/")):
+            license_page = (SITE / f"{prefix}license.html").read_text(encoding="utf-8")
+            self.assertIn("LICENSE.md", license_page)
+            self.assertIn("LICENSE-CC-BY-4.0", license_page)
+            self.assertIn("LICENSE-MIT", license_page)
+            mixed_page = (SITE / f"{prefix}index.html").read_text(encoding="utf-8")
+            self.assertIn("educational prose and original artwork are CC BY 4.0", mixed_page)
+            self.assertIn("page structure, controls, and application behavior are MIT", mixed_page)
+
     def test_korean_overview_and_example_labels_are_localized_and_accurate(self):
         korean_home = (SITE / "ko" / "index.html").read_text(encoding="utf-8")
         integration = (SITE / "ko" / "chapters" / "integration.html").read_text(encoding="utf-8")

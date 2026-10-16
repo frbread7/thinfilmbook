@@ -31,7 +31,7 @@
       {
         "heading": "Define the measurand before choosing an instrument",
         "paragraphs": [
-          "“Film thickness” can mean a geometric step height, a fitted optical thickness, an X-ray density-layer thickness, or a mass-per-area equivalent divided by assumed density. These quantities coincide only under suitable uniformity and model assumptions. Roughness, porosity, interfacial layers, lateral nonuniformity, and substrate contributions can change the relation between signal and reported thickness. Define the measurand and the region represented before comparing methods. [[r09]]",
+          "“Film thickness” can mean a geometric step height, a fitted optical thickness, an X-ray density-layer thickness [[r09]], or a mass-per-area equivalent divided by assumed density. These quantities coincide only under suitable uniformity and model assumptions. Roughness, porosity, interfacial layers, lateral nonuniformity, and substrate contributions can change the relation between signal and reported thickness. Define the measurand and the region represented before comparing methods.",
           "Every measurement samples a finite depth, area, and population of structures. A local cross-section may reveal a specific interface while missing wafer-scale variation; an area-averaged optical or X-ray result can conceal local defects. State measurement location, area, sampling plan, and whether the reported value is local, averaged, or inferred. Use standards or reference materials where available, while checking that their composition and geometry are relevant to the sample. [[r10]]"
         ]
       },
@@ -45,7 +45,7 @@
       {
         "heading": "Composition and structure by spectroscopy and diffraction",
         "paragraphs": [
-          "X-ray photoelectron spectroscopy (XPS) estimates near-surface elemental composition and chemical states from photoelectron energies and intensities. Quantification depends on sensitivity factors, background and peak models, attenuation, surface contamination, and sample charging. Conventional XPS is surface sensitive; sputter depth profiling can introduce preferential sputtering, mixing, reduction, or other chemical change. State acquisition and preparation conditions and avoid treating a fitted surface ratio as bulk stoichiometry. [[r09]]",
+          "X-ray photoelectron spectroscopy (XPS) estimates near-surface elemental composition and chemical states from photoelectron energies and intensities. Quantification depends on sensitivity factors, background and peak models, attenuation, surface contamination, and sample charging. Conventional XPS is surface sensitive; sputter depth profiling can introduce preferential sputtering, mixing, reduction, or other chemical change. State acquisition and preparation conditions and avoid treating a fitted surface ratio as bulk stoichiometry.",
           "High-resolution X-ray diffraction (HRXRD) identifies and quantifies ordered crystalline contributions through peak position, shape, and intensity under an appropriate structural model. Amorphous or poorly ordered fractions may contribute little or diffuse intensity, and overlapping phases, texture, strain, finite domain size, and instrument resolution affect interpretation. A diffraction peak position alone does not uniquely determine composition or strain; complementary composition and structural measurements may be needed."
         ]
       },
@@ -61,7 +61,7 @@
       {
         "heading": "기기를 고르기 전에 측정량을 정의한다",
         "paragraphs": [
-          "“막 두께”는 기하학적 단차 높이, 적합된 광학 두께, X선 밀도층 두께 또는 가정 밀도로 나눈 면적당 질량 등 여러 뜻일 수 있다. 이 값들은 균일성과 모델 가정이 적절할 때만 일치한다. 거칠기, 기공률, 계면층, 면내 불균일성 및 기판 기여는 신호와 보고 두께의 관계를 바꿀 수 있다. 방법을 비교하기 전에 측정량과 대표 영역을 정의한다. [[r09]]",
+          "“막 두께”는 기하학적 단차 높이, 적합된 광학 두께, X선 밀도층 두께 [[r09]] 또는 가정 밀도로 나눈 면적당 질량 등 여러 뜻일 수 있다. 이 값들은 균일성과 모델 가정이 적절할 때만 일치한다. 거칠기, 기공률, 계면층, 면내 불균일성 및 기판 기여는 신호와 보고 두께의 관계를 바꿀 수 있다. 방법을 비교하기 전에 측정량과 대표 영역을 정의한다.",
           "모든 측정은 유한한 깊이, 면적 및 구조 모집단을 표본화한다. 국소 단면은 특정 계면을 드러내지만 웨이퍼 규모 변화를 놓칠 수 있고, 면적 평균 광학 또는 X선 결과는 국소 결함을 숨길 수 있다. 측정 위치, 면적, 표본화 계획 및 보고값이 국소값, 평균값 또는 추론값인지를 밝힌다. 가능한 경우 표준 또는 기준 물질을 사용하되 조성과 형상이 시료에 관련되는지 확인한다. [[r10]]"
         ]
       },
@@ -75,7 +75,7 @@
       {
         "heading": "분광 및 회절을 이용한 조성과 구조 분석",
         "paragraphs": [
-          "X선 광전자 분광법(XPS)은 광전자 에너지와 강도에서 표면 근처 원소 조성 및 화학 상태를 추정한다. 정량은 감도 계수, 배경 및 피크 모델, 감쇠, 표면 오염 및 시료 대전에 의존한다. 일반 XPS는 표면 민감하며 스퍼터 깊이 프로파일링은 선택 스퍼터링, 혼합, 환원 또는 다른 화학 변화를 일으킬 수 있다. 측정 및 시료 준비 조건을 밝혀야 하며, 피팅된 표면 비율을 벌크 화학량론으로 취급해서는 안 된다. [[r09]]",
+          "X선 광전자 분광법(XPS)은 광전자 에너지와 강도에서 표면 근처 원소 조성 및 화학 상태를 추정한다. 정량은 감도 계수, 배경 및 피크 모델, 감쇠, 표면 오염 및 시료 대전에 의존한다. 일반 XPS는 표면 민감하며 스퍼터 깊이 프로파일링은 선택 스퍼터링, 혼합, 환원 또는 다른 화학 변화를 일으킬 수 있다. 측정 및 시료 준비 조건을 밝혀야 하며, 피팅된 표면 비율을 벌크 화학량론으로 취급해서는 안 된다.",
           "고분해능 X선 회절(HRXRD)은 적절한 구조 모델에서 피크 위치, 형태 및 강도를 이용해 질서 있는 결정 기여를 식별하고 정량화한다. 비정질 또는 질서도가 낮은 분율은 기여가 적거나 확산 산란에 나타날 수 있으며, 상 중첩, 배향, 변형, 유한 결정립 크기 및 기기 분해능이 해석에 영향을 준다. 회절 피크 위치만으로 조성이나 변형률을 고유하게 결정할 수 없으므로 보완적인 조성 및 구조 측정이 필요할 수 있다."
         ]
       },

@@ -1,0 +1,21 @@
+# Provenance and review
+
+ThinFilmBook was developed with Codex and other AI assistance across English and Korean educational prose, translation and revision, simulator and site code, build tooling, tests, software configuration, and the original SVG cover and favicon. The available history does not reliably identify the tool or author of every individual passage or code fragment, so this records project-level provenance rather than assigning authorship to each component. The license scope is component-based in [LICENSE.md](../LICENSE.md).
+
+This provenance note does not assert that a particular AI-assisted output is copyrightable or that copyright in it belongs to frbread7. The project maintainer grants CC BY 4.0 or MIT permissions only for rights the maintainer controls, and makes no claim about rights beyond those available under applicable law. It does not claim consent or authorization from unknown third-party contributors.
+
+For context, OpenAI's [general Terms of Use](https://openai.com/policies/row-terms-of-use/) describe output ownership as between OpenAI and the user and to the extent permitted by applicable law; terms can differ by product and jurisdiction. This project does not treat that statement as a determination that any particular output is copyrightable, owned by frbread7, or free of third-party rights.
+
+The bibliography links public technical sources for further study. The audit of tracked source and generated site output found bibliographic records and links, but no publisher prose, figures, tables, datasets, or software embedded in the project. It found no vendored package code, remote scripts, remote stylesheets, or externally hosted fonts. The cover and favicon are local SVG artwork authored for this project. The build uses Python's and Node.js's standard libraries; `package.json` declares no dependencies. GitHub-maintained Actions are called by pinned revisions in CI and are not vendored or relicensed here.
+
+## Reference scope
+
+The research set includes thin-film nucleation and growth, ALD surface chemistry, sputtered-film structure, CVD transport, epitaxial mismatch, stress, and NIST metrology publications. Each chapter declares its cited reference IDs, and inline citations link to the local reference record. The local reference-overlap review with My Library records ThinFilmBook as `original-deeper-treatment`; ProcessBook and DopingBook remain reference-only comparison points at their pinned revisions.
+
+Bibliographic records and links were rechecked against publisher, institutional, or NIST records on October 16, 2026. That audit found that an earlier candidate entry gave NISTIR 7604 the title of a project section and linked to a PDF returning 404. NIST's [official NISTIR 7604 record](https://www.nist.gov/publications/semiconductor-microelectronics-and-nanoelectronics-programs-3) gives the report title as *Semiconductor Microelectronics and Nanoelectronics Programs*. The entry now cites NISTIR 7426 by its official report title and uses NIST's [publication record](https://www.nist.gov/publications/semiconductor-microelectronics-and-nanoelectronics-programs-1); the [report PDF](https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7426.pdf) contains a “Thin-Film X-Ray Metrology for Microelectronics” section on printed page 149. The reference note limits its use to the historical X-ray metrology work it documents, not present-day capabilities. NIST's [Thin Film RGTMs page](https://www.nist.gov/programs-projects/thin-film-rgtms) includes its access date and stated update date; it may change. Citations identify sources and do not grant reuse rights. This record does not claim a complete rights audit for the linked works or certify every technical interpretation.
+
+## Technical review boundaries
+
+The chapters distinguish physical mechanisms, reduced equations, and material/process-specific behavior. Numerical examples are illustrative. The three lab models include units, assumptions, bounded inputs, limiting-case checks, and stated omissions. No model is presented as calibrated equipment behavior or as a process window.
+
+Independent internal reviewer feedback is editorial evidence only. Review findings and release evidence are recorded separately from this provenance statement. Local build and browser success do not demonstrate production deployment or fab validation.

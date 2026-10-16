@@ -2,7 +2,7 @@
 
 ThinFilmBook is an original bilingual engineering textbook about thin-film growth, deposition, epitaxy, interfaces, film stress, characterization, and process integration.
 
-This repository is a **local, in-progress release candidate**. It includes twelve English and Korean chapters, three bounded analytical labs, original cover artwork, citations, and local validation. Its manifest omits the top-level public repository and production destinations because neither exists. Chapter and lab routes, plus the nested attribution repository URL, describe prospective unverified locations; the My Library portal exposes no external action for this in-progress record. Nothing here is a calibrated process guide or evidence of fab qualification.
+This repository contains twelve English and Korean chapters, three bounded analytical labs, original cover and favicon artwork, citations, and local validation. The book-local manifest remains `in-progress` at version `0.1.0` as source metadata; publication and deployment status are recorded separately in [docs/RELEASE.md](docs/RELEASE.md). Nothing here is a calibrated process guide or evidence of fab qualification.
 
 ## Build and validate
 
@@ -19,4 +19,4 @@ Open `http://localhost:4173/` and use the language control for the Korean editio
 
 The ALD, CVD, and Stoney-equation labs are deliberately reduced teaching models. They expose units and assumptions and do not provide recipes, setpoints, equipment predictions, or material-specific acceptance limits. See [model assumptions and validation](docs/MODELS_AND_VALIDATION.md), [provenance](docs/PROVENANCE_AND_REVIEW.md), and [release gates](docs/RELEASE.md).
 
-The book is registered as `in-progress` in its local manifest. No public repository or Pages deployment has been created or verified.
+License scope is component-based: educational prose and original artwork use CC BY 4.0, while application code and software tooling use MIT. See [LICENSE.md](LICENSE.md), [LICENSE-AND-ATTRIBUTION.md](LICENSE-AND-ATTRIBUTION.md), and the [AI-assisted provenance record](docs/PROVENANCE_AND_REVIEW.md).

@@ -1,20 +1,43 @@
-# Release gates
+# Release and Pages evidence
 
-Current state: local candidate, manifest status `in-progress`, version `0.1.0`. The repository, chapter, and lab routes remain unverified; no GitHub repository has been created, no release tag exists, and no public site has been deployed or verified. The My Library record omits its top-level public destinations, so it exposes no repo or site action. Public repository creation and Pages deployment are authorized for this release task; publication remains gated on final source review and a complete file-level rights map.
+## Source-manifest convention
 
-The candidate is buildable offline. Before release:
+The book-local `library-manifest.json` remains `in-progress` at version `0.1.0`
+as source metadata. Publication is recorded separately in the central My
+Library catalog after the public repository, release, and production site have
+been verified.
 
-1. Review the final source and generated diff, the license and attribution record, bilingual content, numerical assumptions, and all independent review findings.
-2. Confirm the existing licenses and rights-holder authority cover every tracked source file and generated asset; do not infer a new license assignment for an unmapped file.
-3. Create the authorized public repository and configure the Pages workflow for deployment from Actions.
-4. Run CI and the release checks on the exact candidate revision; create a versioned release only after review passes.
-5. Verify the successful Pages deployment's source SHA and check both language landing pages, all 24 chapter routes, the three lab anchors, citations, and license links against the live site.
-6. Record deployment evidence separately from the release tag. Keep the My Library manifest `in-progress` until its production requirements and evidence are reviewed and explicitly updated.
+## Release gates
 
-The current local verification cannot satisfy steps 2–5. The candidate now has local Git history, but no public remote, CI run, source publication, or deployment evidence.
+1. Review the complete source and generated-site diff, bilingual content,
+   model assumptions, license scope, provenance, third-party references, and
+   independent review findings.
+2. Run `npm test`; it rebuilds the static site, checks generated output,
+   validates JavaScript syntax and bilingual content, and tests the numerical
+   models and local routes.
+3. Push the reviewed source revision to `main`. The Pages workflow must run
+   `npm test`, upload that run's generated `site/` artifact, and deploy that
+   artifact only after validation succeeds.
+4. Verify that the successful Pages deployment identifies the reviewed source
+   revision. Check both language landing pages, all 24 chapter routes, all
+   three lab routes and calculations, citations, license links, and responsive
+   behavior in a browser.
+5. Create the `v1.0.0` release tag only after the production checks pass. Keep
+   the source manifest at `in-progress` / `0.1.0`; update the central catalog
+   only with evidence from the verified public release and deployment.
 
-## Pages validation and artifact flow
+## Evidence to retain
 
-The `.github/workflows/pages.yml` workflow validates pull requests and main-branch releases with `npm test`. That command builds the site, checks the complete generated output and source routes, checks JavaScript syntax, runs the numerical model tests, and runs the bilingual content/site tests. The validation job uploads the freshly generated `site/` directory as the Pages artifact. Deployment runs only for `main` after validation succeeds and deploys that artifact; it does not use the checked-in generated site as its input.
+For each public release, record the source commit, version tag, successful
+validation workflow URL, Pages deployment run or identifier, deployed URL and
+source revision, production route and lab checks, and browser/device widths
+checked. A successful local build or CI run alone does not prove that the
+production deployment completed or serves the same revision.
 
-Local checks do not provide external CI or deployment traceability. Record the exact source SHA separately from the release tag and deployed production revision after the Pages run succeeds.
+## Pages artifact flow
+
+The `.github/workflows/pages.yml` workflow runs `npm test` on pull requests and
+on pushes to `main`. The validation job uploads the freshly generated `site/`
+directory as the Pages artifact. Deployment runs only for `main` after
+validation succeeds and uses that uploaded artifact rather than the checked-in
+generated site.

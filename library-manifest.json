@@ -32,7 +32,7 @@
     "ko"
   ],
   "version": "0.1.0",
-  "lastUpdated": "2026-10-15",
+  "lastUpdated": "2026-10-16",
   "chapterCount": 12,
   "chapters": [
     {
@@ -274,9 +274,9 @@
     "processintegrationbook"
   ],
   "attribution": {
-    "license": "CC BY 4.0 for original educational prose, diagrams, illustrative examples, and cover artwork; MIT for original code. See LICENSE-AND-ATTRIBUTION.md.",
+    "license": "CC BY 4.0 for original educational prose, explanations, exercises, and artwork; MIT for original application code and software tooling. See LICENSE.md for component-level scope.",
     "repositoryUrl": "https://github.com/frbread7/thinfilmbook",
-    "notes": "Original ThinFilmBook content, cover artwork, and favicon; cited publications are linked as references and are not reproduced. The chapter and lab routes and attribution repository URL are prospective, unverified locations only; no public repository or site exists. This local in-progress candidate has no release or production verification evidence."
+    "notes": "AI-assisted provenance is documented at repository scope. The source manifest remains in-progress by catalog convention; publication and deployment evidence are recorded separately. Cited publications are linked for study and are not reproduced."
   },
   "cover": "assets/covers/thinfilmbook.svg",
   "theme": {

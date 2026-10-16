@@ -1,3 +1,5 @@
+/* ThinFilmBook simulator implementations are MIT-licensed. Educational prose and artwork remain separately scoped under CC BY 4.0. See LICENSE.md and LICENSE-MIT. */
+
 const finite = (name, value, low, high) => {
   if (!Number.isFinite(value) || value < low || value > high) {
     throw new RangeError(`${name} must be in [${low}, ${high}]`);

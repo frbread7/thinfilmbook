@@ -32,7 +32,7 @@
         "heading": "An interface is a region, not an ideal plane",
         "paragraphs": [
           "A deposited layer meets a substrate through a finite region whose structure reflects surface termination, adsorbates, nucleation, and the arriving species. An interface may be chemically abrupt but geometrically rough, chemically graded but geometrically smooth, or both. These distinctions matter: a composition gradient is not proof of topographic roughness, and a rough boundary does not by itself establish intermixing. Surface reaction and nucleation pathways can create chemically distinct interfacial material before the nominal film reaches steady growth. [[r01]] [[r03]]",
-          "Represent the interface at the scale relevant to the question. An atomic-scale model may resolve bonding and discrete planes; a continuum profile may represent composition versus depth; a device model may need an effective interfacial layer with measured thickness and properties. The reported boundary depends on the probe, its information depth, sample preparation, and the model used to fit its signal. State these choices rather than assigning a single universal interface width. [[r09]]"
+          "Represent the interface at the scale relevant to the question. An atomic-scale model may resolve bonding and discrete planes; a continuum profile may represent composition versus depth; a device model may need an effective interfacial layer with measured thickness and properties. The reported boundary depends on the probe, its information depth, sample preparation, and the model used to fit its signal. State these choices rather than assigning a single universal interface width."
         ]
       },
       {
@@ -52,7 +52,7 @@
       {
         "heading": "Measure the interface that the question requires",
         "paragraphs": [
-          "Depth profiling, photoelectron spectroscopy, reflectometry, diffraction, and cross-sectional microscopy observe different signals and sampling volumes. Sputter depth profiling can mix or alter material; photoelectron spectra are surface sensitive and depend on attenuation and chemical-state fitting; reflectometry infers layered density and roughness through a model; diffraction emphasizes ordered crystalline material. A fitted transition width therefore combines actual structure with instrumental response, sample preparation, and analysis assumptions. [[r09]]",
+          "Depth profiling, photoelectron spectroscopy, reflectometry, diffraction, and cross-sectional microscopy observe different signals and sampling volumes. Sputter depth profiling can mix or alter material; photoelectron spectra are surface sensitive and depend on attenuation and chemical-state fitting. X-ray reflectometry infers layered density and roughness through a model; diffraction emphasizes ordered crystalline material [[r09]]. A fitted transition width therefore combines actual structure with instrumental response, sample preparation, and analysis assumptions.",
           "Report the observable, calibration, analysis model, and uncertainty alongside any claimed interface width or composition. Compare independent methods when the distinction between roughness, interdiffusion, and a reaction layer is consequential. A near-surface result does not establish bulk composition, and a bulk-sensitive average can conceal a thin but functionally important interface. Treat disagreements as evidence about different depth sensitivities or model assumptions to investigate."
         ]
       }
@@ -62,7 +62,7 @@
         "heading": "계면은 이상적인 한 평면이 아니라 유한한 영역이다",
         "paragraphs": [
           "증착막과 기판은 표면 종단, 흡착종, 핵생성 및 입사종의 영향을 받는 유한한 영역을 통해 만난다. 계면은 화학적으로 급격하면서 기하학적으로 거칠 수 있고, 화학적 구배가 있으면서 기하학적으로 매끄러울 수도 있으며, 두 특성이 함께 나타날 수도 있다. 조성 구배가 표면 거칠기의 증거는 아니며, 거친 경계만으로 혼합이 입증되는 것도 아니다. 표면 반응과 핵생성 경로는 명목상 정상 성장에 도달하기 전부터 화학적으로 다른 계면 물질을 만들 수 있다. [[r01]] [[r03]]",
-          "질문에 적합한 길이 척도에서 계면을 표현한다. 원자 규모 모델은 결합과 개별 원자면을 분해할 수 있고, 연속체 프로파일은 깊이에 따른 조성을 나타낼 수 있으며, 소자 모델은 측정된 두께와 물성을 가진 유효 계면층이 필요할 수 있다. 보고되는 경계는 탐침, 정보 깊이, 시료 준비 및 신호 적합에 사용한 모델에 따라 달라진다. 보편적인 단일 계면 폭을 제시하지 말고 이러한 선택을 밝혀야 한다. [[r09]]"
+          "질문에 적합한 길이 척도에서 계면을 표현한다. 원자 규모 모델은 결합과 개별 원자면을 분해할 수 있고, 연속체 프로파일은 깊이에 따른 조성을 나타낼 수 있으며, 소자 모델은 측정된 두께와 물성을 가진 유효 계면층이 필요할 수 있다. 보고되는 경계는 탐침, 정보 깊이, 시료 준비 및 신호 적합에 사용한 모델에 따라 달라진다. 보편적인 단일 계면 폭을 제시하지 말고 이러한 선택을 밝혀야 한다."
         ]
       },
       {
@@ -82,7 +82,7 @@
       {
         "heading": "질문에 맞는 계면 측정",
         "paragraphs": [
-          "깊이 프로파일링, 광전자 분광, 반사율, 회절 및 단면 현미경은 서로 다른 신호와 표본 부피를 관측한다. 스퍼터 깊이 프로파일링은 혼합이나 변질을 일으킬 수 있고, 광전자 스펙트럼은 표면 민감하며 감쇠와 화학 상태 피팅에 의존한다. 반사율은 모델을 통해 층 밀도와 거칠기를 추론하고, 회절은 질서 있는 결정질 물질을 강조한다. 따라서 적합된 전이 폭은 실제 구조와 기기 응답, 시료 준비 및 분석 가정이 결합된 결과다. [[r09]]",
+          "깊이 프로파일링, 광전자 분광, 반사율, 회절 및 단면 현미경은 서로 다른 신호와 표본 부피를 관측한다. 스퍼터 깊이 프로파일링은 혼합이나 변질을 일으킬 수 있고, 광전자 스펙트럼은 표면 민감하며 감쇠와 화학 상태 피팅에 의존한다. X선 반사율 분석은 모델을 통해 층의 밀도와 거칠기를 추론한다. 회절은 질서 있는 결정질 물질을 강조한다 [[r09]]. 따라서 적합된 전이 폭은 실제 구조와 기기 응답, 시료 준비 및 분석 가정이 결합된 결과다.",
           "계면 폭이나 조성 주장을 할 때 관측량, 교정, 분석 모델 및 불확도를 함께 보고한다. 거칠기, 상호확산 및 반응층의 구분이 중요하면 서로 독립적인 방법을 비교한다. 표면 근처 결과가 벌크 조성을 입증하지 않으며, 벌크 민감 평균은 기능에 중요한 얇은 계면을 가릴 수 있다. 불일치는 서로 다른 깊이 민감도나 모델 가정에 대한 조사 단서로 다룬다."
         ]
       }

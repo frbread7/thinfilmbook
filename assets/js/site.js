@@ -1,3 +1,4 @@
+/* ThinFilmBook site application code is MIT-licensed; educational text it presents keeps its separate CC BY 4.0 scope. See LICENSE.md and LICENSE-MIT. */
 import { calculateAldProfile, calculateCvdFlux, calculateStoneyStress } from './models.mjs';
 
 const locale = document.documentElement.lang === 'ko' ? 'ko' : 'en';

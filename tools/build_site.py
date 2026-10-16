@@ -167,6 +167,7 @@ def page_shell(lang, title, route, body, ui, chapters, current_chapter=None):
     asset_prefix = "../" * len(Path(current_route).parts[:-1])
     return f'''<!doctype html>
 <html lang="{lang}">
+<!-- Component notices: educational prose and original artwork are CC BY 4.0; page structure, controls, and application behavior are MIT. See LICENSE.md and LICENSE-AND-ATTRIBUTION.md. Referenced works retain their own rights. -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -346,7 +347,7 @@ def render_lab(lang, labs, ui):
 
 def render_license(lang, ui):
     prefix = "../" if lang == "ko" else ""
-    return f'''<article class="license-page"><p class="eyebrow">ThinFilmBook · {escape(ui['license'])}</p><h1>{escape(ui['licenseHeading'])}</h1><p class="lede">{escape(ui['licenseIntro'])}</p><ul><li>{escape(ui['cc'])} <a href="{prefix}LICENSE-CC-BY-4.0">LICENSE-CC-BY-4.0</a>.</li><li>{escape(ui['mit'])} <a href="{prefix}LICENSE-MIT">LICENSE-MIT</a>.</li></ul><p>{escape(ui['rights'])}</p><p>{escape(ui['review'])}</p><h2>{escape(ui['references'])}</h2><p>{escape(ui['referencesIntro'])} <a href="references.html">{escape(ui['openReferences'])}</a></p></article>'''
+    return f'''<article class="license-page"><p class="eyebrow">ThinFilmBook · {escape(ui['license'])}</p><h1>{escape(ui['licenseHeading'])}</h1><p class="lede">{escape(ui['licenseIntro'])}</p><ul><li>{escape(ui['cc'])} <a href="{prefix}LICENSE-CC-BY-4.0">LICENSE-CC-BY-4.0</a>.</li><li>{escape(ui['mit'])} <a href="{prefix}LICENSE-MIT">LICENSE-MIT</a>.</li></ul><p>{escape(ui['rights'])}</p><p>{escape(ui['review'])}</p><p>{escape(ui['scopeMap'])} <a href="{prefix}LICENSE.md">LICENSE.md</a> · <a href="{prefix}LICENSE-AND-ATTRIBUTION.md">LICENSE-AND-ATTRIBUTION.md</a></p><h2>{escape(ui['references'])}</h2><p>{escape(ui['referencesIntro'])} <a href="references.html">{escape(ui['openReferences'])}</a></p></article>'''
 
 
 def manifest_data(chapters, labs):
@@ -368,9 +369,9 @@ def manifest_data(chapters, labs):
     } for item in labs["experiments"]]
     manifest["lastUpdated"] = date.today().isoformat()
     manifest["attribution"] = {
-        "license": "CC BY 4.0 for original educational prose, diagrams, illustrative examples, and cover artwork; MIT for original code. See LICENSE-AND-ATTRIBUTION.md.",
+        "license": "CC BY 4.0 for original educational prose, explanations, exercises, and artwork; MIT for original application code and software tooling. See LICENSE.md for component-level scope.",
         "repositoryUrl": manifest["attribution"]["repositoryUrl"],
-        "notes": "Original ThinFilmBook content, cover artwork, and favicon; cited publications are linked as references and are not reproduced. The chapter and lab routes and attribution repository URL are prospective, unverified locations only; no public repository or site exists. This local in-progress candidate has no release or production verification evidence.",
+        "notes": "AI-assisted provenance is documented at repository scope. The source manifest remains in-progress by catalog convention; publication and deployment evidence are recorded separately. Cited publications are linked for study and are not reproduced.",
     }
     return manifest
 
@@ -430,10 +431,13 @@ def write_site(chapters, references, labs, ui, pages, output_root=SITE, announce
     if favicon.is_file():
         (output_root / "assets").mkdir(parents=True, exist_ok=True)
         shutil.copyfile(favicon, output_root / "assets" / "favicon.svg")
-    for name in ("LICENSE-AND-ATTRIBUTION.md", "LICENSE-CC-BY-4.0", "LICENSE-MIT"):
+    for name in ("LICENSE.md", "LICENSE-AND-ATTRIBUTION.md", "LICENSE-CC-BY-4.0", "LICENSE-MIT"):
         source = ROOT / name
         if source.is_file():
             shutil.copyfile(source, output_root / name)
+    docs = ROOT / "docs"
+    if docs.is_dir():
+        shutil.copytree(docs, output_root / "docs", dirs_exist_ok=True)
     if announce:
         print(f"Built {len(chapters)} bilingual chapters and {len(labs['experiments'])} labs.")
 
